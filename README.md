@@ -1,6 +1,5 @@
-# cafeStore 
+# myProfile
 
 version 0.0.1 
 
-簡易的express、mongoose來實現Restful API
-"# myProfile" 
+利用angularjs v1.4.8 建置個人作品集
