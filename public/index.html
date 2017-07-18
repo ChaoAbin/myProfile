@@ -208,15 +208,87 @@
         .navbar-default .navbar-nav > li > a {
             color: #93B3E3;
         }
+
+        .all-rights-reserved {
+            position: relative;
+            width: 100%;
+            margin: 30px 0px;
+            text-align: center;
+            color: #548FCE;
+        }
+        .abin-works-web {
+            display: none;
+        }
+        .abin-works-mobile {
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+        .tab-circle {
+            position: relative;
+            top: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        @media (min-width: 768px) {
+            .abin-works-web {
+                position: fixed;
+                top: 80px;
+                left: 0px;
+                display: block;
+                z-index: 10;
+            }
+            .abin-works-mobile {
+                display: none;
+            }
+            .tab-circle {
+                top: 0px;
+                width: 15px;
+                height: 15px;
+                background: transparent;
+                border-radius: 100%;
+                border: 5px #528ecc solid;
+                margin: auto;
+                margin-bottom: 5px;
+                visibility: hidden;
+                display: block;
+            }
+        }
+        @media (min-width: 992px) {
+            .all-rights-reserved {
+                position: fixed;
+                bottom: 40px;
+                left: 40px;
+                display: block;
+                text-align: left;
+                margin: 0px;
+            }
+        }
+        @media (min-width: 1200px) {
+        }
     </style>
 </head>
 
 
 <body ng-app="myApp" style="background-color: #EFF4FB;">
 
+    <div class="abin-works-web">
+        <a href="home" style="text-decoration: none;">
+            <div class="tab-circle" style="top: 8px; visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;"></div>
+            <p style="position: relative; top: 45px; transform: rotate(90deg); color: #548FCE;letter-spacing: 1px;">ABIN WORKS</p>
+        </a>
+    </div>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <div class="abin-works-mobile">
+                    <a href="home" style="text-decoration: none;">
+                        <div class="tab-circle" style="visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;margin-right: 5px;"></div>
+                        <p style="/*! position: relative; */ /*! top: 45px; */ /*! transform: rotate(90deg); */ color: #548FCE;letter-spacing: 1px;display: inline-block;">ABIN WORKS</p>
+                    </a>
+                </div>
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -256,17 +328,11 @@
         </div>
     </nav>
 
-    <div class="container" style="padding: 0px; margin-top: 50px;" ng-view>
+    <div class="container" style="padding: 0px;" ng-view>
     </div>
 
-    <div style="position: fixed; top: 80px; left: 0px;">
-        <a href="home">
-            <div class="tab-circle" style="visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;"></div>
-            <p style="transform: rotate(90deg);top: 45px;position: relative;color: #548FCE;letter-spacing: 1px;">ABIN WORKS</p>
-        </a>
-    </div>
 
-    <div style="position: fixed; bottom: 40px; left: 40px; color: #548FCE;">
+    <div class="all-rights-reserved">
         <p style="margin: 0px;">©ABIN WORKS</p>
         <p style="margin: 0px;">ALL RIGHTS RESERVED.</p>
     </div>
