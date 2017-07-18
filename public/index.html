@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="個人的作品集">
+    <meta name="author" content="Chao.Abin">
+    
+    <base href="/self/myProfile/public/">
+
+    <title>Abin作品集</title>
+
+    <link href="frameWork/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="frameWork/bootstrap-3.3.7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- time-line -->
+    <link href="css/timeline.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="js/lib/jquery-3.1.0.min.js"></script>
+    <!-- angularJS -->
+    <script src="js/lib/angular1.4.8.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <!-- bootstrap -->
+    <script src="frameWork/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="frameWork/bootstrap-3.3.7-dist/js/ie-emulation-modes-warning.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="frameWork/bootstrap-3.3.7-dist/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- data -->
+    <script src="data/profile.js"></script>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+
+        app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+            $routeProvider
+            .when("/", {
+                templateUrl : "tpl/home.html",
+                controller : "home"
+            })
+            .when("/home", {
+                templateUrl : "tpl/home.html",
+                controller : "home"
+            })
+            .when("/about", {
+                templateUrl : "tpl/about.html",
+                controller : "about"
+            })
+            .when("/profile", {
+                templateUrl : "tpl/profile.html",
+                controller : "profile"
+            })
+            .when("/profile_content/:index", {
+                templateUrl : "tpl/profile_content.html",
+                controller : "profile_content"
+            })
+            .when("/contact", {
+                templateUrl : "tpl/contact.html",
+                controller : "contact"
+            }).otherwise({redirectTo: '/'});
+
+            $locationProvider.html5Mode(true);
+        }]);
+
+        app.filter("toArray", function(){
+            return function(obj) {
+                var result = [];
+                angular.forEach(obj, function(val, key) {
+                    val['key'] = key;
+                    result.push(val);
+                });
+                return result;
+            };
+        });
+
+        app.factory('profileData', function() {
+            var profileData = {};
+            var bol = true; //只抓一次檔案
+            //local檔案改成讀檔
+            if(location.toString().indexOf("file://") != -1) {
+                profileData = $.data_profile;
+            } else if(bol) {
+                $.ajax({
+                    url: "data/profile.json",
+                    async: false,
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({}),
+                    type: "GET",
+                    dataType:'json',
+                    success: function(data){
+                        profileData = data;
+                    },
+                    error:function(e){ 
+                        console.log(e);
+                    }
+                });
+                bol = false;
+            }
+
+            function getAll() {
+                return profileData;
+            }
+            function getByIndex(index) {
+                return profileData[index];
+            }
+            return {
+                getAll: getAll,
+                getByIndex: getByIndex
+            }
+        });
+
+        app.factory('historyData', function($sce) {
+            var historyData = {};
+            var bol = true; //只抓一次檔案
+            //local檔案改成讀檔
+            if(location.toString().indexOf("file://") != -1) {
+                historyData = $.data_historyData;
+            } else if(bol) {
+                $.ajax({
+                    url: "data/history.json",
+                    async: false,
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({}),
+                    type: "GET",
+                    dataType:'json',
+                    success: function(data){
+                        historyData = data;
+                    },
+                    error:function(e){ 
+                        console.log(e);
+                    }
+                });
+                bol = false;
+            }
+
+            angular.forEach(historyData, function(value, key) {
+                value['title'] = $sce.trustAsHtml(value['title']);
+                value['subTitle'] = $sce.trustAsHtml(value['subTitle']);
+            });
+
+            var now = new Date();
+            historyData.push({
+                                "type": "today"
+                                ,"time": now.getFullYear() + "/" + (now.getMonth()+1) + "/" + now.getDate()
+                            });
+
+            function getAll() {
+                return historyData;
+            }
+
+            return {
+                getAll: getAll
+            }
+        });
+
+        app.controller("home", ['$scope', '$sce', 'historyData', function ($scope, $sce, historyData) {
+            var history = historyData.getAll();
+            $scope.history = history;
+        }]);
+        app.controller("about", function ($scope) {
+            $scope.msg = "I love Paris";
+        });
+        app.controller("profile", function ($scope, profileData ) {
+            var profile = profileData.getAll();
+            angular.forEach(profile, function(value, key) {
+                var timeNumber = new Date(value['joinTime']);
+                profile[key]['timeNumber'] = timeNumber.getTime()/100000;
+            });
+            console.log(profile);
+            $scope.profile = profile;
+        });
+        app.controller("profile_content", function ($scope, $routeParams, profileData ) {
+            //預設顯示第一張圖
+            $scope.showId = 0;
+            $scope.profile = profileData.getByIndex($routeParams.index);
+            $scope.showPhoto = function(index) {
+                $scope.showId = index;
+            }
+        });
+        app.controller("contact", function ($scope) {
+            $scope.msg = "I love Paris";
+        });
+    </script>
+
+    <style type="text/css">
+        .navbar-default {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .tab-circle {
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            border-radius: 100%;
+            border: 5px #528ecc solid;
+            margin: auto;
+            margin-bottom: 5px;
+            visibility: hidden;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #5e96ce;
+        }
+    </style>
+</head>
+
+
+<body ng-app="myApp" style="background-color: #eef2f8;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Abin作品集</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="home">
+                        <a href="home">
+                            <div class="tab-circle"></div>
+                            HOME<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li id="about">
+                        <a href="about">
+                            <div class="tab-circle"></div>
+                            ABOUT<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li id="profile">
+                        <a href="profile">
+                            <div class="tab-circle"></div>
+                            WORKS<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li id="contact">
+                        <a href="contact">
+                            <div class="tab-circle"></div>
+                            CONTACT<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 0px;" ng-view>
+    </div>
+
+</body>
+</html>
+

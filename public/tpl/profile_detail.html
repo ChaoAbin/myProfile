@@ -1,0 +1,23 @@
+<p style="font-size: 18pt">{{profile.project}}</p>
+<p>{{profile.description}}</p>
+<p>分類：
+    <span>{{profile.type}}
+    		<span ng-if="profile.url">(<a target="_blank" href="{{profile.url}}">連結</a>)</span>
+	</span>
+</p>
+<p>負責項目：<span>{{profile.responsible}}</span></p>
+<p ng-if="profile.front">前端語言：
+    <span ng-repeat="val in profile.front">
+        {{val.lan}}{{val.lib?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib?')':''}}{{!$last?'、':''}}
+    </span>
+</p>
+<p ng-if="profile.end">後端語言：
+    <span ng-repeat="val in profile.end">
+        {{val.lan}}{{val.lib?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib?')':''}}{{!$last?'、':''}}
+    </span>
+</p>
+<p ng-if="profile.db">資料庫：
+    <span ng-repeat="val in profile.db">{{val}}</span>
+</p>
+<p>製作公司：<span>{{profile.company}}</span></p>
+<p>時間：<span>{{profile.joinTime}}</span></p>

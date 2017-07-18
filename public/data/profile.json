@@ -1,0 +1,623 @@
+{
+	"1": {
+		"type": "website"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "禪林虛擬博物館"
+		, "icon": "img/profile_icon/zenlin_icon.jpg"
+		, "image": [{
+			"img": "img/sds/zenlin_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/sds/zenlin_02.jpg"
+			,"desc": "關於禪林"
+		},{
+			"img": "img/sds/zenlin_03.jpg"
+			,"desc": "禪林收藏"
+		},{
+			"img": "img/sds/zenlin_04.jpg"
+			,"desc": "禪林博物館"
+		}]
+		, "url": "http://www.sds.com.tw/web/org/zenlin/frontstage/"
+		, "responsible": "網頁製作(全端)"
+		, "description": "禪林藝術有限公司委託將古董文物進行數位典藏，並製作個人網站。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		},{
+			"lan": "krpano(VR)"
+			,"lib": null
+		}]
+		, "end": [{
+			"lan": "PHP"
+			,"lib": ["PHPExcel"]
+		}]
+		, "db": ["MySQL"]
+		, "dataType": ["xml", "json"]
+		, "ps": "目前此網站資料庫有編碼問題"
+		, "joinTime": "2013/06/01"
+	}
+	,"2": {
+		"type": "website"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "台灣國家公園數位典藏"
+		, "icon": "img/profile_icon/npda_icon.jpg"
+		, "image": [{
+			"img": "img/sds/npda_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/sds/npda_02.jpg"
+			,"desc": "國家公園發展歷史"
+		},{
+			"img": "img/sds/npda_03.jpg"
+			,"desc": "典藏墾丁"
+		},{
+			"img": "img/sds/npda_04.jpg"
+			,"desc": "環境教育"
+		}]
+		, "url": "http://npda.cpami.gov.tw/index.php"
+		, "responsible": "資料庫整理、使用後台系統維運網站、其他雜務"
+		, "description": "此網站原為其他公司製作，而我們想進行資料庫的整理與頁面改造，因此需分析網頁各頁的資料來源。"
+		, "front": null
+		, "end": null
+		, "db": ["mysql"]
+		, "dataType": ["json"]
+		, "ps": ""
+		, "joinTime": "2013/07/01"
+	}
+	,"3": {
+		"type": "website"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "新竹市眷村博物館"
+		, "icon": "img/profile_icon/militaryCommunity_icon.jpg"
+		, "image": [{
+			"img": "img/sds/militaryCommunity_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/sds/militaryCommunity_02.jpg"
+			,"desc": "拉吧的小遊戲"
+		},{
+			"img": "img/sds/militaryCommunity_03.jpg"
+			,"desc": "虛擬實境(VR)"
+		},{
+			"img": "img/sds/militaryCommunity_04.jpg"
+			,"desc": "眷村的歷史"
+		}]
+		, "url": "http://220.133.85.35/mainpage/index.php"
+		, "responsible": "網頁製作"
+		, "description": "這個專案是幫新竹眷村博物館製作導覽機並將一些文物進行數位典藏，其導覽機主要為windows作業系統，預設開機時會執行firefox與網頁。"
+		, "front": [{
+			"lan": "html5、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		},{
+			"lan": "krpano(VR)"
+			,"lib": null
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": ["xml"]
+		, "ps": ""
+		, "joinTime": "2013/08/01"
+	}
+	,"4": {
+		"type": "app"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "新竹市眷村博物館"
+		, "icon": "img/profile_icon/militaryCommunity_app_icon.jpg"
+		, "image": [{
+			"img": "img/sds/militaryCommunity_app_01.jpg"
+			,"desc": "首頁/本館介紹"
+		},{
+			"img": "img/sds/militaryCommunity_app_02.jpg"
+			,"desc": "文物解說/樓層介紹"
+		}]
+		, "googlePlayUrl": "https://play.google.com/store/apps/details?id=tw.com.sds.HsinChuMilDepVil"
+		, "iTunesUrl": "https://itunes.apple.com/tw/app/xin-zhu-shi-juan-cun-bo-wu-guan/id768110960?mt=8"
+		, "responsible": "協助網頁排版"
+		, "description": "這個專案是幫新竹眷村博物館製作導覽機並將一些文物進行數位典藏，其app主要用phonegap製作。"
+		, "app": "phonegap"
+		, "ps": ""
+		, "joinTime": "2013/08/01"
+	}
+	,"5": {
+		"type": "website"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "國立故宮博物館 送不出去的國書"
+		, "icon": "img/profile_icon/credentials_icon.jpg"
+		, "image": [{
+			"img": "img/sds/credentials_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/sds/credentials_02.jpg"
+			,"desc": "故事緣起"
+		},{
+			"img": "img/sds/credentials_03.jpg"
+			,"desc": "認識滿文"
+		},{
+			"img": "img/sds/credentials_04.jpg"
+			,"desc": "國書互動app"
+		}]
+		, "url": "http://theme.npm.edu.tw/exh103/Credentials/index.html"
+		, "responsible": "網頁排版、app頁面排版"
+		, "description": "國立故宮博物館的案子，替\"送不出去的國書\"製作相關介紹網頁、影片、VR、數位典藏。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2013/10/01"
+	}
+	,"6": {
+		"type": "app"
+		,"company": "聖傑國際數位科技有限公司"
+		, "project": "國立故宮博物館 送不出去的國書"
+		, "icon": "img/profile_icon/credentials_app_icon.jpg"
+		, "image": [{
+			"img": "img/sds/credentials_app_01.jpg"
+			,"desc": "首頁/致英國國書"
+		},{
+			"img": "img/sds/credentials_app_02.jpg"
+			,"desc": "致英國國書(滿文)/連結"
+		}]
+		, "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.npm.NPM.DiplomaticCredentials&hl=zh_TW"
+		, "iTunesUrl": "https://itunes.apple.com/tw/app/song-bu-chu-qu-de-guo-shu/id909593951?l=zh&mt=8"
+		, "responsible": "協助app頁面排版"
+		, "description": "國立故宮博物館的案子，替\"送不出去的國書\"製作相關介紹、小遊戲。"
+		, "app": "phonegap"
+		, "ps": ""
+		, "joinTime": "2013/10/01"
+	}
+	,"7": {
+		"type": "website"
+		,"company": "乒乓話網"
+		, "project": "app365builder"
+		, "icon": "img/yp/builder_icon.jpg"
+		, "image": [{
+			"img": "img/yp/builder_01.jpg"
+			,"desc": "編輯頁面"
+		},{
+			"img": "img/yp/builder_02.jpg"
+			,"desc": "完成的網頁"
+		}]
+		, "url": "http://ypcloud.com/app365builder/"
+		, "responsible": "製作一個可簡單製作網頁的網站"
+		, "description": "開發一個類似wordpress、wix的平台，讓一般設計師可以快速地建立網頁。"
+		, "front": [{
+			"lan": "html5、css3"
+			,"lib": ["bootstrap"]
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery", "googleMapAPI", "DataTables", "Highcharts"]
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": ["json"]
+		, "ps": "使用此網站可用Guest身份登入。"
+		, "joinTime": "2014/04/01"
+	},"8": {
+		"type": "website"
+		,"company": "歐特雲科技有限公司"
+		, "project": "eFamily"
+		, "icon": "img/studio/eFamily_icon.jpg"
+		, "image": [{
+			"img": "img/studio/eFamily_01.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_02.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_03.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_04.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_ipad_01.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_ipad_02.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_ipad_03.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/eFamily_ipad_04.jpg"
+			,"desc": ""
+		}]
+		, "url": "http://ypcloud.com/app365builder/"
+		, "responsible": "webView的網頁製作與app開發"
+		, "description": ""
+		, "front": [{
+			"lan": "html5、css3"
+			,"lib": ["bootstrap"]
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery", "Highcharts"]
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": ["json"]
+		, "ps": ""
+		, "joinTime": "2014/07/01"
+	},"9": {
+		"type": "website"
+		,"company": "歐特雲科技有限公司"
+		, "project": "ADCall"
+		, "icon": "img/studio/adCall_icon.jpg"
+		, "image": [{
+			"img": "img/studio/adCall_01.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/adCall_02.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/adCall_03.jpg"
+			,"desc": ""
+		},{
+			"img": "img/studio/adCall_04.jpg"
+			,"desc": ""
+		}]
+		, "url": "http://ypcloud.com/app365builder/"
+		, "responsible": "webView的app開發"
+		, "description": "更改手機的來電顯示，並可以設定通訊錄與黑名單"
+		, "front": [{
+			"lan": "html5、css3"
+			,"lib": ["bootstrap"]
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": ["json"]
+		, "ps": ""
+		, "joinTime": "2014/07/01"
+	},"ADCall": {
+		"type": "website"
+		,"company": "歐特雲科技有限公司"
+		, "project": "ADCall"
+		, "icon": "img/studio/adCall_icon.jpg"
+		, "image": [{
+			"img": "img/studio/adCall_01.jpg"
+			,"desc": "編輯頁面"
+		}]
+		, "url": "http://ypcloud.com/app365builder/"
+		, "responsible": "webView的app開發"
+		, "description": "在來電時顯示廣告，並可設定拒接的黑名單。"
+		, "front": [{
+			"lan": "html5、css3"
+			,"lib": ["bootstrap"]
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery", "Highcharts"]
+		}]
+		, "end": null
+		, "db": null
+		, "dataType": ["json"]
+		, "ps": ""
+		, "joinTime": "2014/07/01"
+	},"PNSServer": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "PNSServer"
+		, "icon": "img/profile_icon/PNSServer_icon.jpg"
+		, "image": [{
+			"img": "img/iit/PNSServer_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/iit/PNSServer_02.jpg"
+			,"desc": "修改訊息"
+		},{
+			"img": "img/iit/PNSServer_03.jpg"
+			,"desc": "發送訊息"
+		},{
+			"img": "img/iit/PNSServer_01.jpg"
+			,"desc": "手機數量列表"
+		}]
+		, "url": null
+		, "responsible": "開發與維運"
+		, "description": "可發送推播給手機，且可依據條件去進行發送與預約發送。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		}]
+		, "end": [{
+			"lan": "PHP"
+			,"lib": ["phpjobscheduler"]
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2015/07/01"
+	},"OpenCart": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "品牌app"
+		, "icon": "img/profile_icon/OpenCart_icon.jpg"
+		, "image": [{
+			"img": "img/iit/OpenCart_01.jpg"
+			,"desc": "登入頁面"
+		},{
+			"img": "img/iit/OpenCart_02.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/iit/OpenCart_03.jpg"
+			,"desc": "產品列表"
+		},{
+			"img": "img/iit/OpenCart_04.jpg"
+			,"desc": "影音列表"
+		},{
+			"img": "img/iit/OpenCart_05.jpg"
+			,"desc": "app畫面"
+		},{
+			"img": "img/iit/OpenCart_06.jpg"
+			,"desc": "app產品與影音"
+		}]
+		, "url": null
+		, "responsible": "系統維運"
+		, "description": "可上架商品與影片來更改app的內容。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		}]
+		, "end": [{
+			"lan": "FrameWork"
+			,"lib": ["OpenCart"]
+		},{
+			"lan": "PHP"
+			,"lib": ["PHPExcel","zip","pdo_sqlite","ImageMagick"]
+		}]
+		, "db": ["MySQL","SQLite"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2016/05/16"
+	},"StockTV": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "StockTV"
+		, "icon": "img/profile_icon/StockTV_icon.jpg"
+		, "image": [{
+			"img": "img/iit/StockTV_01.jpg"
+			,"desc": "登入頁面"
+		},{
+			"img": "img/iit/StockTV_02.jpg"
+			,"desc": "產品管理"
+		},{
+			"img": "img/iit/StockTV_03.jpg"
+			,"desc": "顯示設定"
+		},{
+			"img": "img/iit/StockTV_04.jpg"
+			,"desc": "刊版頁面"
+		}]
+		, "url": null
+		, "responsible": "系統維運"
+		, "description": "提供各營運點顯示各自的銷售商品，其商品是由進銷存系統的伺服器同步資料過來，並產生各營運點的資料且提供顯示的設定後台。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		}]
+		, "end": [{
+			"lan": "FrameWork"
+			,"lib": ["CakePHP"]
+		},{
+			"lan": "PHP"
+			,"lib": ["PHPExcel"]
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2015/09/22"
+	},"uPlaza": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "uPlaza"
+		, "icon": "img/profile_icon/uPlaza_icon.jpg"
+		, "image": [{
+			"img": "img/iit/uPlaza_01.jpg"
+			,"desc": "登入頁面"
+		},{
+			"img": "img/iit/uPlaza_02.jpg"
+			,"desc": "訂單管理"
+		},{
+			"img": "img/iit/uPlaza_03.jpg"
+			,"desc": "設定優惠方案"
+		},{
+			"img": "img/iit/uPlaza_04.jpg"
+			,"desc": "編輯優惠方案"
+		},{
+			"img": "img/iit/uPlaza_05.jpg"
+			,"desc": "手機相關設定"
+		}]
+		, "url": null
+		, "responsible": "系統維運"
+		, "description": "Speed Catalog app的後台管理系統，可設定商品提供給經銷商購買。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery"]
+		}]
+		, "end": [{
+			"lan": "FrameWork"
+			,"lib": ["CakePHP"]
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2015/07/22"
+	},"SC": {
+		"type": "app"
+		,"company": "香港商英迪思"
+		, "project": "Speed Catalog"
+		, "icon": "img/profile_icon/sc_icon.jpg"
+		, "image": [{
+			"img": "img/iit/sc_01.jpg"
+			,"desc": "登入頁面"
+		},{
+			"img": "img/iit/sc_02.jpg"
+			,"desc": "訂單管理"
+		},{
+			"img": "img/iit/sc_03.jpg"
+			,"desc": "設定優惠方案"
+		}]
+		, "url": "https://play.google.com/store/apps/details?id=com.iit.map2p"
+		, "responsible": "系統維運"
+		, "description": "Speed Catalog app提供給經銷商購買商品，購買流程的頁面皆是web。"
+		, "front": [{
+			"lan": "html、css"
+			,"lib": null
+		},{
+			"lan": "javascript"
+			,"lib": ["jquery", "jqueryUI"]
+		}]
+		, "end": [{
+			"lan": "FrameWork"
+			,"lib": ["CakePHP"]
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2015/07/22"
+	},"Southelite": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "南英扶輪社官網"
+		, "icon": "img/profile_icon/southelite_icon.jpg"
+		, "image": [{
+			"img": "img/iit/southelite_01.jpg"
+			,"desc": "首頁"
+		},{
+			"img": "img/iit/southelite_02.jpg"
+			,"desc": "認識南英"
+		},{
+			"img": "img/iit/southelite_03.jpg"
+			,"desc": "社刊"
+		},{
+			"img": "img/iit/southelite_04.jpg"
+			,"desc": "行事曆"
+		}]
+		, "url": "http://www.southeliterc.org/push/mobile/#"
+		, "responsible": "網站開發與維運"
+		, "description": "南英扶輪社的網站，也是RWD的網頁，並提供簡易的後台設定。"
+		, "front": [{
+			"lan": "Backbone"
+			,"lib": null
+		},{
+			"lan": "Bootstrap"
+			,"lib": null
+		},{
+			"lan": "Jquery"
+			,"lib": null
+		}]
+		, "end": [{
+			"lan": "Grails"
+			,"lib": null
+		},{
+			"lan": "groovy"
+			,"lib": null
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2016/03/01"
+	},"SoutheliteBackend": {
+		"type": "website"
+		,"company": "香港商英迪思"
+		, "project": "南英扶輪社後台管理系統"
+		, "icon": "img/profile_icon/southeliteBackend_icon.jpg"
+		, "image": [{
+			"img": "img/iit/SoutheliteBackend_01.jpg"
+			,"desc": "登入頁面"
+		},{
+			"img": "img/iit/SoutheliteBackend_02.jpg"
+			,"desc": "推播訊息頁"
+		},{
+			"img": "img/iit/SoutheliteBackend_03.jpg"
+			,"desc": "社刊頁"
+		},{
+			"img": "img/iit/SoutheliteBackend_04.jpg"
+			,"desc": "推播訊息編輯頁"
+		}]
+		, "url": null
+		, "responsible": "網站開發與維運"
+		, "description": "南英扶輪社的後台設定網站，提供簡易的網站設定，如：新增會員、新增社刊、推播訊息...等等。"
+		, "front": [{
+			"lan": "Backbone"
+			,"lib": null
+		},{
+			"lan": "Bootstrap"
+			,"lib": null
+		},{
+			"lan": "Jquery"
+			,"lib": null
+		}]
+		, "end": [{
+			"lan": "Grails"
+			,"lib": null
+		},{
+			"lan": "groovy"
+			,"lib": null
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2016/03/01"
+	},"SoutheliteApp": {
+		"type": "app"
+		,"company": "香港商英迪思"
+		, "project": "南英扶輪社app"
+		, "icon": "img/profile_icon/southeliteApp_icon.jpg"
+		, "image": [{
+			"img": "img/iit/southeliteApp_01.jpg"
+			,"desc": "首頁/認識南英"
+		},{
+			"img": "img/iit/southeliteApp_02.jpg"
+			,"desc": "社刊/行事曆"
+		},{
+			"img": "img/iit/southeliteApp_03.jpg"
+			,"desc": "一般訊息/活動訊息"
+		}]
+		, "url": "http://www.southeliterc.org/push/app_download.html"
+		, "responsible": "webView的網頁製作"
+		, "description": "南英扶輪社的app頁面，利用RWD的設計，讓官網也可在手機上瀏覽。"
+		, "front": [{
+			"lan": "Backbone"
+			,"lib": null
+		},{
+			"lan": "Bootstrap"
+			,"lib": null
+		},{
+			"lan": "Jquery"
+			,"lib": null
+		}]
+		, "end": [{
+			"lan": "Grails"
+			,"lib": null
+		},{
+			"lan": "groovy"
+			,"lib": null
+		}]
+		, "db": ["MySQL"]
+		, "dataType": null
+		, "ps": ""
+		, "joinTime": "2016/03/01"
+	}
+}

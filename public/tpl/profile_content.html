@@ -1,0 +1,59 @@
+<style>
+    .photoBar {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .photoBar .tag {
+        float: left;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .photoView {
+        padding: 3px;
+        border: 1px solid gray;
+    }
+    .photoInView {
+        position: relative;
+        width: 100%;
+    }
+    .infoMobile, .infoPC {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .infoMobile {
+            display: block;
+        }
+        body {
+            margin-bottom: 10px;
+        }
+    }
+    @media (min-width: 767px) {
+        .infoPC {
+            display: block;
+        }
+        body {
+            overflow-y: scroll; 
+        }
+    }
+</style>
+
+<div ng-include="'tpl/profile_detail.html'" class="col-xss-12 col-xs-12 col-sm-4 col-md-3 col-lg-3 infoMobile">
+</div>
+
+<div class="col-xss-12 col-xs-12 col-sm-8 col-md-9 col-lg-9">
+    <div class="photoBar">
+        <div ng-repeat="val in profile.image" ng-click="showPhoto($index)" class="tag">{{$index}}</div>
+    </div>
+
+    <div class="photoView">
+        <img ng-repeat="val in profile.image" ng-show="showId=={{$index}}" class="photoInView" ng-src="{{val.img}}">
+    </div>
+</div>
+
+<div ng-include="'tpl/profile_detail.html'" class="col-xss-12 col-xs-12 col-sm-4 col-md-3 col-lg-3 infoPC">
+</div>
