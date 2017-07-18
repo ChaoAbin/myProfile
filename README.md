@@ -1,5 +1,7 @@
 # myProfile
 
+createDate: 20170718
+
 version 0.0.1 
 
-利用angularjs v1.4.8 建置個人作品集test
+利用angularjs v1.4.8 建置個人作品集
