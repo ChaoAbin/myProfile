@@ -160,13 +160,14 @@
             }
         });
 
-        app.controller("home", ['$scope', '$sce', 'historyData', function ($scope, $sce, historyData) {
+        app.controller("home", function ($scope) {
+            // var history = historyData.getAll();
+            // $scope.history = history;
+        });
+        app.controller("about", ['$scope', '$sce', 'historyData', function ($scope, $sce, historyData) {
             var history = historyData.getAll();
             $scope.history = history;
         }]);
-        app.controller("about", function ($scope) {
-            $scope.msg = "I love Paris";
-        });
         app.controller("profile", function ($scope, profileData ) {
             var profile = profileData.getAll();
             angular.forEach(profile, function(value, key) {
@@ -259,8 +260,10 @@
     </div>
 
     <div style="position: fixed; top: 80px; left: 0px;">
-        <div class="tab-circle" style="visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;"></div>
-        <p style="transform: rotate(90deg);top: 45px;position: relative;color: #548FCE;letter-spacing: 1px;">ABIN WORKS</p>
+        <a href="home">
+            <div class="tab-circle" style="visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;"></div>
+            <p style="transform: rotate(90deg);top: 45px;position: relative;color: #548FCE;letter-spacing: 1px;">ABIN WORKS</p>
+        </a>
     </div>
 
     <div style="position: fixed; bottom: 40px; left: 40px; color: #548FCE;">
