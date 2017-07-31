@@ -184,9 +184,28 @@
             $scope.showPhoto = function(index) {
                 $scope.showId = index;
             }
+            $scope.screenTop = function() {
+                $('body,html').animate({
+                    scrollTop: 0 ,
+                    }, 700
+                );
+            }
         });
         app.controller("contact", function ($scope) {
             $scope.msg = "I love Paris";
+        });
+
+        app.directive("scroll", function ($window) {
+            return function(scope, element, attrs) {
+                angular.element($window).bind("scroll", function() {
+                     if (this.pageYOffset >= 150) {
+                         $("#goTop").css("display","block");
+                     } else {
+                         $("#goTop").css("display","none");
+                     }
+                    scope.$apply();
+                });
+            };
         });
     </script>
 
@@ -270,7 +289,7 @@
 </head>
 
 
-<body ng-app="myApp" style="background-color: #EFF4FB;">
+<body ng-app="myApp" style="background-color: #EFF4FB;" scroll >
 
     <div class="abin-works-web">
         <a href="home" style="text-decoration: none;">
