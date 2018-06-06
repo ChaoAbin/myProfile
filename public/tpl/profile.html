@@ -43,6 +43,8 @@
                     <a href="profile_content/{{val.key}}">
                         {{val.project}}
                     </a>
+                    <img ng-if="val.type == 'website'" src="img/icon/icon_pc.png" style="float: right;">
+                    <img ng-if="val.type == 'app'" src="img/icon/icon_phone.png" style="float: right;">
                 </div>
                 <p class="profile-desc">
                     {{val.description.length > 20 ?val.description.substr(0, 20) + "...":val.description }}

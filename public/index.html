@@ -19,6 +19,99 @@
 
     <link href="css/main.css" rel="stylesheet">
 
+    <style type="text/css">
+        .absoluteCenter {
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom: 0px; 
+            right: 0px;
+            left: 0px;
+        }
+        .navbar-default {
+            background-color: #EFF4FB;
+            border-color: transparent;
+        }
+        .tab-circle {
+            width: 15px;
+            height: 15px;
+            background: transparent;
+            border-radius: 100%;
+            border: 5px #528ecc solid;
+            margin: auto;
+            margin-bottom: 5px;
+            visibility: hidden;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #93B3E3;
+        }
+
+        .all-rights-reserved {
+            position: relative;
+            width: 100%;
+            margin: 30px 0px;
+            text-align: center;
+            color: #548FCE;
+            min-width: 400px;
+        }
+        .abin-works-web {
+            display: none;
+        }
+        .abin-works-mobile {
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+        .tab-circle {
+            position: relative;
+            top: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .pcBorder {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .abin-works-web {
+                position: fixed;
+                top: 80px;
+                left: 0px;
+                display: block;
+                z-index: 10;
+            }
+            .abin-works-mobile {
+                display: none;
+            }
+            .tab-circle {
+                top: 0px;
+                width: 15px;
+                height: 15px;
+                background: transparent;
+                border-radius: 100%;
+                border: 5px #528ecc solid;
+                margin: auto;
+                margin-bottom: 5px;
+                visibility: hidden;
+                display: block;
+            }
+            .pcBorder {
+                display: block;
+            }
+        }
+        @media (min-width: 992px) {
+            .all-rights-reserved {
+                position: fixed;
+                bottom: 40px;
+                left: 40px;
+                display: block;
+                text-align: left;
+                margin: 0px;
+            }
+        }
+        @media (min-width: 1200px) {
+        }
+    </style>
+
     <!-- jquery -->
     <script src="js/lib/jquery-3.1.0.min.js"></script>
     <!-- angularJS -->
@@ -33,13 +126,13 @@
     <script src="frameWork/bootstrap-3.3.7-dist/js/ie10-viewport-bug-workaround.js"></script>
 
     <!-- data -->
-    <script src="data/profile.js"></script>
+    <script src="data/data_profile.js"></script>
+    <script src="data/data_history.js"></script>
 
     <script>
         var app = angular.module("myApp", ["ngRoute"]);
 
         app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-
             $routeProvider
             .when("/", {
                 templateUrl : "tpl/home.html",
@@ -82,27 +175,7 @@
 
         app.factory('profileData', function() {
             var profileData = {};
-            var bol = true; //只抓一次檔案
-            //local檔案改成讀檔
-            if(location.toString().indexOf("file://") != -1) {
-                profileData = $.data_profile;
-            } else if(bol) {
-                $.ajax({
-                    url: "data/profile.json",
-                    async: false,
-                    contentType: "application/json; charset=utf-8",
-                    data: JSON.stringify({}),
-                    type: "GET",
-                    dataType:'json',
-                    success: function(data){
-                        profileData = data;
-                    },
-                    error:function(e){ 
-                        console.log(e);
-                    }
-                });
-                bol = false;
-            }
+            profileData = $.data_profile;
 
             function getAll() {
                 return profileData;
@@ -117,28 +190,7 @@
         });
 
         app.factory('historyData', function($sce) {
-            var historyData = {};
-            var bol = true; //只抓一次檔案
-            //local檔案改成讀檔
-            if(location.toString().indexOf("file://") != -1) {
-                historyData = $.data_historyData;
-            } else if(bol) {
-                $.ajax({
-                    url: "data/history.json",
-                    async: false,
-                    contentType: "application/json; charset=utf-8",
-                    data: JSON.stringify({}),
-                    type: "GET",
-                    dataType:'json',
-                    success: function(data){
-                        historyData = data;
-                    },
-                    error:function(e){ 
-                        console.log(e);
-                    }
-                });
-                bol = false;
-            }
+            var historyData = $.data_history;
 
             angular.forEach(historyData, function(value, key) {
                 value['title'] = $sce.trustAsHtml(value['title']);
@@ -164,10 +216,21 @@
             // var history = historyData.getAll();
             // $scope.history = history;
         });
-        app.controller("about", ['$scope', '$sce', 'historyData', function ($scope, $sce, historyData) {
-            var history = historyData.getAll();
-            $scope.history = history;
-        }]);
+        /*
+        app.controller("about", ['$scope', '$sce', 'historyData', 'canvasS'
+            , function ($scope, $sce, historyData, canvasS) {
+                canvasS.toMask("img/icon/mask.png", "img/head.jpg");
+                var history = historyData.getAll();
+                $scope.history = history;
+            }
+        ]);
+        */
+        app.controller("about", ['$scope', '$sce', 'historyData'
+            , function ($scope, $sce, historyData) {
+                var history = historyData.getAll();
+                $scope.history = history;
+            }
+        ]);
         app.controller("profile", function ($scope, profileData ) {
             var profile = profileData.getAll();
             angular.forEach(profile, function(value, key) {
@@ -209,87 +272,17 @@
         });
     </script>
 
-    <style type="text/css">
-        .navbar-default {
-            background-color: #EFF4FB;
-            border-color: transparent;
-        }
-        .tab-circle {
-            width: 15px;
-            height: 15px;
-            background: transparent;
-            border-radius: 100%;
-            border: 5px #528ecc solid;
-            margin: auto;
-            margin-bottom: 5px;
-            visibility: hidden;
-        }
-        .navbar-default .navbar-nav > li > a {
-            color: #93B3E3;
-        }
-
-        .all-rights-reserved {
-            position: relative;
-            width: 100%;
-            margin: 30px 0px;
-            text-align: center;
-            color: #548FCE;
-        }
-        .abin-works-web {
-            display: none;
-        }
-        .abin-works-mobile {
-            display: inline-block;
-            margin-left: 15px;
-            margin-top: 8px;
-        }
-        .tab-circle {
-            position: relative;
-            top: 7px;
-            margin-right: 10px;
-            display: inline-block;
-        }
-        @media (min-width: 768px) {
-            .abin-works-web {
-                position: fixed;
-                top: 80px;
-                left: 0px;
-                display: block;
-                z-index: 10;
-            }
-            .abin-works-mobile {
-                display: none;
-            }
-            .tab-circle {
-                top: 0px;
-                width: 15px;
-                height: 15px;
-                background: transparent;
-                border-radius: 100%;
-                border: 5px #528ecc solid;
-                margin: auto;
-                margin-bottom: 5px;
-                visibility: hidden;
-                display: block;
-            }
-        }
-        @media (min-width: 992px) {
-            .all-rights-reserved {
-                position: fixed;
-                bottom: 40px;
-                left: 40px;
-                display: block;
-                text-align: left;
-                margin: 0px;
-            }
-        }
-        @media (min-width: 1200px) {
-        }
-    </style>
+    <!--script src="js/canvasService.js"></script-->
 </head>
 
 
 <body ng-app="myApp" style="background-color: #EFF4FB;" scroll >
+    <!-- 網頁外框 -->
+    <div class="pcBorder" style="position: fixed; width: 100%; height: 5px; top: 0px; left: 0px; z-index: 9999; background-color: #528ecc;"></div>
+    <div class="pcBorder" style="position: fixed; width: 100%; height: 5px; bottom: 0px; left: 0px; z-index: 9999; background-color: #528ecc;"></div>
+    <div class="pcBorder" style="position: fixed; width: 5px; height: 100%; top: 0px; left: 0px; z-index: 9999; background-color: #528ecc;"></div>
+    <div class="pcBorder" style="position: fixed; width: 5px; height: 100%; top: 0px; right: 0px; z-index: 9999; background-color: #528ecc;"></div>
+
 
     <div class="abin-works-web">
         <a href="home" style="text-decoration: none;">
@@ -300,7 +293,7 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" style="box-shadow: 0px 0px 4px 1px #d7dde5;">
                 <div class="abin-works-mobile">
                     <a href="home" style="text-decoration: none;">
                         <div class="tab-circle" style="visibility: visible;width: 18px;height: 18px;border: 6px #528ecc solid;margin-right: 5px;"></div>

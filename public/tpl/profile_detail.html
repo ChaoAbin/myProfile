@@ -5,6 +5,12 @@
 </style>
 <div style="color: #5076AF; padding-top: 10px;">
     <img src="" style="width: 20px;">
+    <div ng-if="profile.type == 'website'" style="margin-bottom: 10px;">
+        <img src="img/icon/icon_pc.png">
+    </div>
+    <div ng-if="profile.type == 'app'" >
+        <img src="img/icon/icon_phone.png" style="margin-bottom: 10px;">
+    </div>
     <div style="border-top: 1px #4B79BD dotted;"></div>
     <p style="font-size: 18pt; font-weight: bold; margin: 20px 0px;">{{profile.project}}</p>
     <p style="margin-bottom: 30px; letter-spacing: 3px;">{{profile.description}}</p>

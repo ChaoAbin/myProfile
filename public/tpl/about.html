@@ -20,8 +20,8 @@
     }
     .page-header > .arrow{
         position: relative;
-        left: 1px;
-        top: 20px;
+        left: 2px;
+        top: 23px;
         font-size: 24pt;
         color: white;
 
@@ -66,9 +66,9 @@
         top: 34px;
         width: 0px;
         height: 0;
-        border-top: 5px solid transparent;
+        border-top: 4px solid transparent;
         border-left: 30px solid #8BB5E2;
-        border-bottom: 5px solid transparent;
+        border-bottom: 4px solid transparent;
     }
     
     .timeline-content {
@@ -101,6 +101,12 @@
 		text-align: center;
 		margin: 20px 0px;
 	}
+    .about-head {
+        display: inline;
+        width: 200px;
+        position: relative;
+        left: 0px;
+    }
     @media (min-width: 768px) {
 	    .timeline-block-web {
 	        position: relative;
@@ -108,6 +114,12 @@
 	        max-width: 600px;
 	        display: block;
 	    }
+        .about-head {
+            display: inline;
+            width: 200px;
+            position: relative;
+            left: 44px;
+        }
     }
     @media (min-width: 992px) {
 		.about-block {
@@ -124,12 +136,14 @@
 </style>
 	<div class="about-block">
 	    <div class="col-xss-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 about-left-block">
-	        <img style="display: inline;" class="img-responsive" src="img/head.jpg">
+	        <img class="img-responsive about-head" src="img/961568.jpg">
 
 	        <div class="timeline-block-web">
+
 	            <div class="page-header" style="margin: 0px; padding-bottom: 5px; text-align: center;">
-	                <span class="glyphicon glyphicon-arrow-right arrow" aria-hidden="true"></span>
+	                <img class="arrow" src="img/icon/btn_arrow.png">
 	            </div>
+
 	            <ul class="timeline" style="padding-right: 15px">
 	                <li ng-repeat="(key, val) in history | orderBy:'-time'" class="timeline-inverted">
 	                    <div ng-if="val.type == 'date'" class="timeline-badge success" style="position: relative; margin-bottom: 15px;" ng-style="{'background-color':val.icon_background}">
@@ -138,7 +152,7 @@
 
 	                    <div ng-if="val.type == 'history'" class="timeline-badge info" ng-style="{'background-color':val.icon_background}">
 	                        <i ng-if="val.icon.split(':')[0] == 'class'" class="{{val.icon.split(':')[1]}}" ></i>
-	                        <img ng-if="val.icon.split(':')[0] == 'link'" ng-src="{{val.icon.split(':')[1]}}" style="width: 32px;"></img>
+	                        <img class="absoluteCenter" ng-if="val.icon.split(':')[0] == 'link'" ng-src="{{val.icon.split(':')[1]}}" style="width: 24px;"></img>
 	                    </div>
 	                    <div ng-if="val.type == 'history'" class="timeline-badge-border info" ng-style="{'background-color':val.icon_background}">
 	                    </div>
@@ -165,7 +179,7 @@
 	                <a href="./#/about">more</a>
 	            </p>
 	        </div-->
-	        <div style="color: #548FCE;">
+	        <div style="color: #548FCE; position: relative;">
 	            <p id="title" style="font-weight: bold; font-size: 15pt; margin-bottom: 20px; ">現職IIT香港商英迪思，專長在網站全端</p>
 	            <p>現職於IIT內的系統維運人員，擅長團隊合作，主要負責PHP的系統維運與RWD網頁開發，從網頁前端開始學習相關的IT技術，html/css/jquery一直到現在RWD的設計切版，都非常的拿手，伺服器方面，使用Linux作業系統與PHP/MySQL來進行開發，藉此可更瞭解伺服器的相關應用，熟悉這些工具之後，才能在與業主提案討論時，快速的提供意見，讓我在溝通與合作的技巧更卓越，解決問題的能力，和案件時程的規劃，皆有專業的水準。</p>
 	            <p>可獨立作業，從與業主接洽需求、系統分析、資料庫的規劃、網頁切版，擁有四年多的設計經歷，一路從網頁前端，進步到全端網站設計師，具有豐富的實戰經驗，已經準備好要找個舞台來好好施展身手了。</p>
@@ -178,7 +192,11 @@
 	            <div>手機程式：Android</div>
 	            <div>版本控管：SVN、Git</div>
 	            <div>作業系統：Windows、Linux(CentOS、Ubuntu)</div>
+
+                <div style="position: absolute; right: 0px; bottom: 0px;">
+                    <img style="margin-left: 10px;" src="img/icon/icon_phone.png">
+                    <img style="margin-left: 10px;" src="img/icon/icon_pc.png">
+                </div>
 	        </div>
 	    </div>
     </div>
-
