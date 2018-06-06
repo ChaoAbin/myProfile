@@ -107,6 +107,10 @@
         position: relative;
         left: 0px;
     }
+    .phone-pc-block {
+        position: relative;
+        margin-top: 20px;
+    }
     @media (min-width: 768px) {
 	    .timeline-block-web {
 	        position: relative;
@@ -119,6 +123,11 @@
             width: 200px;
             position: relative;
             left: 44px;
+        }
+        .phone-pc-block {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
         }
     }
     @media (min-width: 992px) {
@@ -193,7 +202,7 @@
 	            <div>版本控管：SVN、Git</div>
 	            <div>作業系統：Windows、Linux(CentOS、Ubuntu)</div>
 
-                <div style="position: absolute; right: 0px; bottom: 0px;">
+                <div class="phone-pc-block">
                     <img style="margin-left: 10px;" src="img/icon/icon_phone.png">
                     <img style="margin-left: 10px;" src="img/icon/icon_pc.png">
                 </div>

@@ -213,6 +213,7 @@
         });
 
         app.controller("home", function ($scope) {
+            $('.navbar-collapse').collapse('hide');
             // var history = historyData.getAll();
             // $scope.history = history;
         });
@@ -227,11 +228,13 @@
         */
         app.controller("about", ['$scope', '$sce', 'historyData'
             , function ($scope, $sce, historyData) {
+                $('.navbar-collapse').collapse('hide');
                 var history = historyData.getAll();
                 $scope.history = history;
             }
         ]);
         app.controller("profile", function ($scope, profileData ) {
+            $('.navbar-collapse').collapse('hide');
             var profile = profileData.getAll();
             angular.forEach(profile, function(value, key) {
                 var timeNumber = new Date(value['joinTime']);
@@ -241,6 +244,7 @@
             $scope.profile = profile;
         });
         app.controller("profile_content", function ($scope, $routeParams, profileData ) {
+            $('.navbar-collapse').collapse('hide');
             //預設顯示第一張圖
             $scope.showId = 0;
             $scope.profile = profileData.getByIndex($routeParams.index);
@@ -255,6 +259,7 @@
             }
         });
         app.controller("contact", function ($scope) {
+            $('.navbar-collapse').collapse('hide');
             $scope.msg = "I love Paris";
         });
 
@@ -301,7 +306,7 @@
                     </a>
                 </div>
 
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
