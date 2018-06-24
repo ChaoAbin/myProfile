@@ -109,6 +109,9 @@
         }
         @media (min-width: 1200px) {
         }
+        .navbarShadow {
+            box-shadow: 0px 0px 8px #337ab7;
+        }
     </style>
 
     <!-- jquery -->
@@ -265,11 +268,16 @@
         app.directive("scroll", function ($window) {
             return function(scope, element, attrs) {
                 angular.element($window).bind("scroll", function() {
-                     if (this.pageYOffset >= 150) {
-                         $("#goTop").css("display","block");
-                     } else {
-                         $("#goTop").css("display","none");
-                     }
+                    if(this.pageYOffset >= 13) {
+                        $(".navbar").addClass("navbarShadow");
+                    } else {
+                        $(".navbar").removeClass("navbarShadow");
+                    }
+                    if (this.pageYOffset >= 150) {
+                        $("#goTop").css("display","block");
+                    } else {
+                        $("#goTop").css("display","none");
+                    }
                     scope.$apply();
                 });
             };

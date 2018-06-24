@@ -22,7 +22,23 @@
         top: 6%;
         left: 15%;
     }
-    /* pc尺寸 */
+    /* 手機尺寸 */
+    @media (min-width: 10px) {
+        .contentTitle {
+            font-size: 14pt;
+        }
+        .contentDesc {
+            font-size: 10pt;
+        }
+        .contentBlock {
+            height: 64%;
+        }
+        .absoluteCenter.contentBlock {
+            top: 0px;
+            left: 15%;
+        }
+    }
+    /* 手機尺寸 */
     @media (min-width: 540px) {
         .contentTitle {
             font-size: 17pt;
@@ -52,7 +68,8 @@
     }
 </style>
 
-<div style="position: relative; width: 100%; max-width: 757px; min-width: 400px; margin: auto; top: 0px;bottom: 0px;">
+<!--div style="position: relative; width: 100%; max-width: 757px; min-width: 400px; margin: auto; top: 0px;bottom: 0px;"-->
+<div style="position: relative; width: 100%; max-width: 757px; margin: auto; top: 0px;bottom: 0px;">
     <img src="img/icon/home.png" style="width: 100%; position: absolute; top: 0px; left: 0px;">
     <img src="img/icon/home.png" style="width: 100%; top: 0px; left: 0px; visibility: hidden;">
 

@@ -682,7 +682,7 @@ $.data_profile= [{
 	, "dataType": null
 	, "ps": ""
 	, "joinTime": "2016/03/01"
-}, {
+},{
 	"type": "website"
 	,"company": "香港商英迪思"
 	, "project": "南門扶輪社官網"
@@ -849,4 +849,313 @@ $.data_profile= [{
 	, "dataType": null
 	, "ps": ""
 	, "joinTime": "2017/02/01"
+},{
+	"type": "website"
+	,"company": "歐特雲科技有限公司"
+	, "project": "SCS"
+	, "icon": "img/studio/scs_icon.jpg"
+	, "image": [{
+		"img": "img/studio/scs_01.jpg"
+		,"desc": "登入畫面"
+	},{
+		"img": "img/studio/scs_02.jpg"
+		,"desc": "公司列表"
+	},{
+		"img": "img/studio/scs_03.jpg"
+		,"desc": "公司內容"
+	},{
+		"img": "img/studio/scs_04.jpg"
+		,"desc": "工作單列表"
+	},{
+		"img": "img/studio/scs_05.jpg"
+		,"desc": "工作單派遣工作"
+	}]
+	, "url": null
+	, "responsible": "網站開發"
+	, "description": "派工單系統，原公司因舊有派工系統較為老舊，不符合新的需求，因此進行改版。改版內容包含：UI/UX修改、資料庫資料轉移、新需求開發。"
+	, "front": [{
+		"lan": "html5、css3"
+		,"lib": ["bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "PHP"
+		,"lib":["Slim3"]
+	}]
+	, "db": "MySQL"
+	, "dataType": ["json"]
+	, "ps": ""
+	, "joinTime": "2016/12/20"
+},{
+	"type": "website"
+	,"company": "九形國際資訊股份有限公司"
+	, "project": "hwater"
+	, "icon": "img/case/hwater/hwater_icon.jpg"
+	, "image": [{
+		"img": "img/case/hwater/hwater_01.jpg"
+		,"desc": "首頁"
+	},{
+		"img": "img/case/hwater/hwater_02.jpg"
+		,"desc": "購買畫面"
+	},{
+		"img": "img/case/hwater/hwater_03.jpg"
+		,"desc": "刷卡付款"
+	},{
+		"img": "img/case/hwater/hwater_04.jpg"
+		,"desc": "查看階層圖"
+	}]
+	, "url": "http://adm.hwater.com.tw/"
+	, "responsible": "前後台網站開發"
+	, "description": "購物車網站，傳直銷販賣飲水機，含獎金計算與產生報表"
+	, "front": [{
+		"lan": "html、css"
+		,"lib": null
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "PHP"
+		,"lib": ["CodeIgniter", "gomypay(金流)"]
+	}]
+	, "db": "MySQL"
+	, "dataType": ["json"]
+	, "ps": ""
+	, "joinTime": "2017/08/01"
+},{
+	"type": "app(backend)"
+	,"company": "外包"
+	, "project": "ShrimpKing"
+	, "icon": "img/case/ShrimpKing/ShrimpKing_icon.png"
+	, "image": [{
+		"img": "img/case/ShrimpKing/ShrimpKing_01.png"
+		,"desc": "首頁"
+	},{
+		"img": "img/case/ShrimpKing/ShrimpKing_02.png"
+		,"desc": "購買列表"
+	},{
+		"img": "img/case/ShrimpKing/ShrimpKing_03.png"
+		,"desc": "商品地點"
+	}]
+	, "url": "https://play.google.com/store/apps/details?id=com.ttg.shrimp_king&hl=en_US"
+	, "responsible": "後台API開發"
+	, "description": "媒合系統，讓愛釣蝦的人可兜售釣到的蝦子，提供使用者可在這平台與釣蝦人進行交易。"
+	, "front": null
+	, "end": [{
+		"lan": "PHP"
+		,"lib": ["CodeIgniter", "FireBase Realtime Database"]
+	}]
+	, "db": "MongODB"
+	, "dataType": ["json"]
+	, "ps": ""
+	, "joinTime": "2017/11/01"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "WiFi自助服務"
+	, "icon": "img/iit/wifiService_icon.png"
+	, "image": [{
+		"img": "img/iit/wifiService_01.png"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/wifiService_02.png"
+		,"desc": "首頁(手機版)"
+	}]
+	, "url": null
+	, "responsible": "單一頁面"
+	, "description": "入口網頁(單一頁面)"
+	, "front": null
+	, "end": null
+	, "db": null
+	, "dataType": ["json"]
+	, "ps": ""
+	, "joinTime": "2018/01/24"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "自助加盟系統"
+	, "icon": "img/iit/ejoin_icon.jpg"
+	, "image": [{
+		"img": "img/iit/ejoin_01.png"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/ejoin_02.png"
+		,"desc": "填寫資料頁"
+	},{
+		"img": "img/iit/ejoin_03.png"
+		,"desc": "資料確認頁"
+	},{
+		"img": "img/iit/ejoin_04.png"
+		,"desc": "快速修改"
+	},{
+		"img": "img/iit/ejoin_05.png"
+		,"desc": "申請完成"
+	}]
+	, "url": null
+	, "responsible": "網站開發與維運"
+	, "description": "經銷商加盟網頁，讓經銷商不需使用櫃檯即可加盟，可用營業點的平版或自己的手機使用此網頁(加入完成後，將資料同步到主Server)"
+	, "front": [{
+		"lan": "html、css"
+		,"lib": ["Bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "FrameWork"
+		,"lib": ["Grails"]
+	},{
+		"lan": "groovy"
+		,"lib": null
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2018/01/24"
+},{
+	"type": "app"
+	,"company": "香港商英迪思"
+	, "project": "自助加盟系統"
+	, "icon": "img/iit/ejoin_icon.jpg"
+	, "image": [{
+		"img": "img/iit/ejoinApp_01.png"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/ejoinApp_02.png"
+		,"desc": "填寫資料頁"
+	},{
+		"img": "img/iit/ejoinApp_03.png"
+		,"desc": "快速修改"
+	},{
+		"img": "img/iit/ejoinApp_05.png"
+		,"desc": "申請完成"
+	},{
+		"img": "img/iit/ejoinApp_04.png"
+		,"desc": "資料確認頁"
+	}]
+	, "url": null
+	, "responsible": "網站開發與維運"
+	, "description": "經銷商加盟網頁，讓經銷商不需使用櫃檯即可加盟，可用營業點的平版或自己的手機使用此網頁(加入完成後，將資料同步到主Server)"
+	, "front": [{
+		"lan": "html、css"
+		,"lib": ["Bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "FrameWork"
+		,"lib": ["Grails"]
+	},{
+		"lan": "groovy"
+		,"lib": null
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2018/01/24"
+},{
+	"type": "app"
+	,"company": "香港商英迪思"
+	, "project": "StockTV"
+	, "icon": "img/profile_icon/StockTV_icon.jpg"
+	, "image": [{
+		"img": "img/iit/StockTVapp_01.png"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/StockTVapp_02.png"
+		,"desc": "商品列表"
+	},{
+		"img": "img/iit/StockTVapp_03.png"
+		,"desc": "搜尋功能"
+	}]
+	, "url": null
+	, "responsible": "系統開發與維運"
+	, "description": "提供經銷商顯示商品銷售的狀況，並提供後台系統，讓經銷商可以設定商品的狀態與顯示的內容。"
+	, "front": [{
+		"lan": "html、css"
+		,"lib": null
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "FrameWork"
+		,"lib": ["CakePHP"]
+	},{
+		"lan": "PHP"
+		,"lib": ["PHPExcel"]
+	}]
+	, "db": ["MySQL (Replication)"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2016/11/24"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "電子簽名版"
+	, "icon": "img/iit/eSignature_icon.png"
+	, "image": [{
+		"img": "img/iit/eSignature_01.jpg"
+		,"desc": "加盟商列表"
+	},{
+		"img": "img/iit/eSignature_02.jpg"
+		,"desc": "加盟商已簽名列表"
+	},{
+		"img": "img/iit/eSignature_03.jpg"
+		,"desc": "加盟商資料確認與簽名頁"
+	}]
+	, "url": null
+	, "responsible": "網站開發與維運"
+	, "description": "電子簽名系統，加盟流程需親筆簽名，因此使用此網頁將簽名檔案e化。"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": ["Bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "FrameWork"
+		,"lib": ["Grails"]
+	},{
+		"lan": "groovy"
+		,"lib": null
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2018/03/08"
+},{
+	"type": "website"
+	,"company": "歐特雲科技有限公司"
+	, "project": "Arofly"
+	, "icon": "img/studio/arofly_icon.jpg"
+	, "image": [{
+		"img": "img/studio/arofly_01.jpg"
+		,"desc": "加盟商列表"
+	},{
+		"img": "img/studio/arofly_02.jpg"
+		,"desc": "加盟商已簽名列表"
+	}]
+	, "url": null
+	, "responsible": "協助"
+	, "description": "協助改寫登入系統，Google Sign-In 與 FB Sign-In "
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": ["Bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["jquery"]
+	}]
+	, "end": [{
+		"lan": "PHP"
+		,"lib":["Laravel"]
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2018/04/15"
 }];

@@ -34,7 +34,8 @@
         </span>
     </p>
     <p ng-if="profile.db">資料庫：
-        <span ng-repeat="val in profile.db">{{val}}</span>
+        <span ng-if="profile.db == 'MongODB'">MongoDB</span>
+        <span ng-if="profile.db != 'MongODB'">{{val}}</span>
     </p>
     <p>製作公司：<span>{{profile.company}}</span></p>
     <p>時間：<span>{{profile.joinTime}}</span></p>
