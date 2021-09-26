@@ -947,7 +947,7 @@ $.data_profile= [{
 		"lan": "PHP"
 		,"lib": ["CodeIgniter", "FireBase Realtime Database"]
 	}]
-	, "db": "MongODB"
+	, "db": "MongoDB"
 	, "dataType": ["json"]
 	, "ps": ""
 	, "joinTime": "2017/11/01"
@@ -1158,4 +1158,193 @@ $.data_profile= [{
 	, "dataType": null
 	, "ps": ""
 	, "joinTime": "2018/04/15"
+},{
+	"type": "website"
+	,"company": "協作雲端科技有限公司"
+	, "project": "CCOS"
+	, "icon": "img/picowork/ccos_icon.jpg"
+	, "image": [{
+		"img": "img/picowork/ccos_01.png"
+		,"desc": ""
+	}]
+	, "url": null
+	, "responsible": "網頁應用程式"
+	, "description": "雲端作業系統，與前端團隊共同開發相關功能"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": ["Bootstrap"]
+	},{
+		"lan": "javascript"
+		,"lib": ["ReactJs"]
+	}]
+	, "end": [{
+		"lan": "NodeJs"
+		,"lib": ["express"]
+	}]
+	, "db": ["MongoDB"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2018/08/15"
+},{
+	"type": "app"
+	,"company": "香港商英迪思"
+	, "project": "微信小程式"
+	, "icon": "img/iit/eCard_icon.jpg"
+	, "image": [{
+		"img": "img/iit/eCard_01.jpg"
+		,"desc": "授權頁"
+	},{
+		"img": "img/iit/eCard_02.jpg"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/eCard_03.jpg"
+		,"desc": "名片收藏頁"
+	},{
+		"img": "img/iit/eCard_04.jpg"
+		,"desc": "其他功能"
+	}]
+	, "url": null
+	, "responsible": "微信-小程式、後台API"
+	, "description": "提供經銷商名片等相關功能，讓經銷商藉此介紹自己代理的銷售產品"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": []
+	},{
+		"lan": "javascript"
+		,"lib": ["微信-小程序"]
+	}]
+	, "end": [{
+		"lan": "Groovy、Java"
+		,"lib": ["Grails"]
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2019/10/08"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "Auziere"
+	, "icon": "img/iit/auziere_icon.jpg"
+	, "image": [{
+		"img": "img/iit/auziere_01.jpg"
+		,"desc": "登入頁"
+	},{
+		"img": "img/iit/auziere_02.jpg"
+		,"desc": "課程"
+	},{
+		"img": "img/iit/auziere_03.jpg"
+		,"desc": "DIY組合"
+	},{
+		"img": "img/iit/auziere_04.jpg"
+		,"desc": "分類"
+	}]
+	, "url": null
+	, "responsible": "Auziere後台管理系統"
+	, "description": "Auziere app 後台管理系統"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": []
+	},{
+		"lan": "javascript"
+		,"lib": ["VueJS"]
+	}]
+	, "end": [{
+		"lan": "Groovy、Java"
+		,"lib": ["Grails"]
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2019/12/27"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "Speed Mall"
+	, "icon": "img/iit/SpeedMall_icon.jpg"
+	, "image": [{
+		"img": "img/iit/SpeedMall_01.jpg"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/SpeedMall_02.jpg"
+		,"desc": "商品頁"
+	},{
+		"img": "img/iit/SpeedMall_03.jpg"
+		,"desc": "購物車頁"
+	},{
+		"img": "img/iit/SpeedMall_04.jpg"
+		,"desc": "結帳頁"
+	},{
+		"img": "img/iit/SpeedMall_05.jpg"
+		,"desc": "訂單查詢頁"
+	},{
+		"img": "img/iit/SpeedMall_06.jpg"
+		,"desc": "後台-產品管理頁"
+	},{
+		"img": "img/iit/SpeedMall_07.jpg"
+		,"desc": "後台-輪播圖管理頁"
+	}]
+	, "url": null
+	, "responsible": "前後台系統規劃與建置"
+	, "description": "Speed Mall購物網站"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": []
+	},{
+		"lan": "javascript"
+		,"lib": ["VueJS"]
+	}]
+	, "end": [{
+		"lan": "Groovy(Grails)、Java"
+		,"lib": []
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2020/12/07"
+},{
+	"type": "website"
+	,"company": "香港商英迪思"
+	, "project": "Miss"
+	, "icon": "img/iit/Miss_icon.jpg"
+	, "image": [{
+		"img": "img/iit/Miss_01.jpg"
+		,"desc": "首頁"
+	},{
+		"img": "img/iit/Miss_02.jpg"
+		,"desc": "商品頁"
+	},{
+		"img": "img/iit/Miss_03.jpg"
+		,"desc": "結帳頁"
+	},{
+		"img": "img/iit/Miss_04.jpg"
+		,"desc": "獎金查詢頁"
+	},{
+		"img": "img/iit/Miss_05.jpg"
+		,"desc": "後台-產品管理頁"
+	},{
+		"img": "img/iit/Miss_06.jpg"
+		,"desc": "後台-訂單管理頁"
+	},{
+		"img": "img/iit/Miss_07.jpg"
+		,"desc": "後台-直立型組織圖查詢"
+	}]
+	, "url": null
+	, "responsible": "前後台系統規劃與建置"
+	, "description": "Miss購物網站"
+	, "front": [{
+		"lan": "html5、css"
+		,"lib": []
+	},{
+		"lan": "javascript"
+		,"lib": ["VueJS"]
+	}]
+	, "end": [{
+		"lan": "Groovy(Grails)、Java"
+		,"lib": []
+	}]
+	, "db": ["MySQL"]
+	, "dataType": null
+	, "ps": ""
+	, "joinTime": "2021/02/19"
 }];

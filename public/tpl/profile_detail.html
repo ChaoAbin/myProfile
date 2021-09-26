@@ -25,17 +25,16 @@
     <p>負責項目：<span>{{profile.responsible}}</span></p>
     <p ng-if="profile.front">前端語言：
         <span ng-repeat="val in profile.front">
-            {{val.lan}}{{val.lib?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib?')':''}}{{!$last?'、':''}}
+            {{val.lan}}{{val.lib.length?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib.length?')':''}}{{!$last?'、':''}}
         </span>
     </p>
     <p ng-if="profile.end">後端語言：
         <span ng-repeat="val in profile.end">
-            {{val.lan}}{{val.lib?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib?')':''}}{{!$last?'、':''}}
+            {{val.lan}}{{val.lib.length?'(':''}}<span ng-repeat="lib in val.lib">{{lib+(!$last?'、':'')}}</span>{{val.lib.length?')':''}}{{!$last?'、':''}}
         </span>
     </p>
     <p ng-if="profile.db">資料庫：
-        <span ng-if="profile.db == 'MongODB'">MongoDB</span>
-        <span ng-if="profile.db != 'MongODB'">{{val}}</span>
+        <span ng-if="profile.db.length">{{profile.db[0]}}</span>
     </p>
     <p>製作公司：<span>{{profile.company}}</span></p>
     <p>時間：<span>{{profile.joinTime}}</span></p>

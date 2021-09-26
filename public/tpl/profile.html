@@ -6,50 +6,170 @@
         color: #548FCE;
     }
     .profile-content {
+        position: relative;
         box-shadow: 0px 4px 9px #ABBDCF;
         background: white;
     }
     .profile-list {
         margin: 15px 0px;
+        cursor: pointer;
+        height: 393px;
+
+    }
+    .profile-list:hover .profile-content {
+        animation-name: mouseOverProfile;
+        animation-duration:2s;
+        animation-iteration-count:infinite;
+        animation-timing-function:step-start;
     }
     .all-rights-reserved {
         display: none;
     }
-    .profile-title {
-        margin-bottom: 10px;
+    .profile-title, .profile-sub-title {
         font-size: 15px;
         color: #548FCE;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
-    .profile-title > a{
-        color: #548FCE;
+    .profile-sub-title {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
     }
     .profile-desc {
         font-size: 13px;
         color: #93B3E3;
         height: 37px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .nav > li > a.profile-type-link:hover {
+        background-color: transparent;
+    }
+    .nav > li > a.profile-type-link {
+        padding: 0px;
+    }
+
+    @keyframes mouseOverProfile {
+        0%{
+            top: 0px;
+        }
+        100%{
+            top: -20px;
+        }
+    }
+
+    .go-top {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        bottom: 20px;
+        color: #5076AF;
+        font-size: 14pt;
+
+        display: none;
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 100%;
+        background: #F7FAFF;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+    .navbar-horizontal li.show .tab-circle {
+        visibility: visible;
+    }
+
+    .tab-circle.horizontal {
+        display: inline-block;
+        margin-bottom: 0px;
+        top: 2px;
+        margin-right: 2px;
+    }
+
+    .navbar-horizontal {
+        color: #93B3E3;
+        margin-bottom: 20px;
+    }
+    .navbar-horizontal li:first-child {
+        margin-left: 0px;
+    }
+    .navbar-horizontal li {
+        margin-left: 20px;
+    }
+
+    .navbar-horizontal li:hover {
+        color: #548FCE;
+        cursor: pointer;
+    }
+
+    .block {
+        height: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .profile-list {
+            height: auto;
+            margin: 10px 0px 0px 0px;
+        }
+        .profile-list:hover .profile-content {
+            animation: none;
+        }
+        .navbar-collapse-horizonta {
+            top: 50px;
+            height: 40px;
+            display: block;
+        }
+        .navbar-collapse-horizonta li {
+            display: inline-block;
+        }
+        .navbar-collapse-horizonta li.show {
+            display: inline-block !important;
+        }
+        .block {
+            height: 15px;
+        }
     }
 </style>
 
 <div class="col-xss-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div ng-repeat="(k, val) in profile | toArray | orderBy:'-timeNumber'" class="profile-list col-xss-12 col-xs-6 col-sm-4 col-md-3 col-lg-3" style="text-align: center">
-        <div class="profile-content">
-            <div style="position: relative; overflow: hidden;">
-                <a href="profile_content/{{val.key}}">
-                    <img style="width: 100%; border-bottom: 1px solid #ABBDCF;" ng-src="{{val.icon}}">
+    <div class="navbar-collapse collapse navbar-collapse-horizonta" style="position: fixed; z-index: 1; background-color: #EFF4FB; width: 100%;">
+        <ul class="nav navbar-nav navbar-horizontal">
+            <li class="{{val == showType ? 'show' : ''}}" ng-repeat="(k, val) in type" style="{{(val == showType ? 'color: #548FCE':'')}} ">
+                <a class="profile-type-link" href="./profile#{{val}}">
+                    <div class="tab-circle horizontal"></div>
+                    {{val}}
+                    <span class="sr-only">(current)</span>
                 </a>
-            </div>
-            <div style="padding: 10px; text-align: left; margin: 10px 0px; font-size: 12pt; min-height: 45px;" >
-                <div class="profile-title">
-                    <a href="profile_content/{{val.key}}">
+            </li>
+        </ul>
+    </div>
+    <div class="block col-xss-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    </div>
+    <div ng-repeat="(k, val) in profile | toArray | orderBy:'-timeNumber'" ng-if="val['type'] == showType || showType == '全部'" class="profile-list col-xss-12 col-xs-6 col-sm-4 col-md-3 col-lg-3" style="text-align: center">
+        <a href="profile_content/{{val.key}}" style="text-decoration:none;">
+            <div class="profile-content">
+                <img style="width: 100%; border-bottom: 1px solid #E2E9F1;" ng-src="{{val.icon}}">
+                <div style="padding: 10px; text-align: left; margin: 10px 0px; font-size: 12pt; min-height: 45px;" >
+                    <div class="profile-title">
                         {{val.project}}
-                    </a>
-                    <img ng-if="val.type == 'website'" src="img/icon/icon_pc.png" style="float: right;">
-                    <img ng-if="val.type == 'app'" src="img/icon/icon_phone.png" style="float: right;">
+                        <img ng-if="val.type == 'website'" src="img/icon/icon_pc.png" style="float: right;">
+                        <img ng-if="val.type == 'app'" src="img/icon/icon_phone.png" style="float: right;">
+                    </div>
+                    <div class="profile-sub-title">{{val.subTitle}}</div>
+                    <p class="profile-desc" ng-bind-html="thisCanBeusedInsideNgBindHtml(val.description)">
+                    </p>
                 </div>
-                <p class="profile-desc">
-                    {{val.description.length > 20 ?val.description.substr(0, 20) + "...":val.description }}
-                </p>
             </div>
-        </div>
+        </a>
     </div>
 </div>
+
+<div id="goTop" ng-click="screenTop()" class="go-top">Top</div>
