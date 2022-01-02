@@ -131,6 +131,11 @@ export default {
     }
   }
   @media (max-width: 767.98px) {
+    header {
+      width: 100%;
+      top: 0px;
+      left: 0px;
+    }
     .navbar-collapse {
       margin-top: 0.5rem;
       .pc-navbar {

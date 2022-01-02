@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <div class="page-frame fixed-border-left"></div>
+    <div class="page-frame fixed-border-right"></div>
     <div class="page-frame fixed-border-top"></div>
     <div class="page-frame fixed-border-bottom"></div>
     <router-view />
@@ -38,19 +40,18 @@ export default {
 }
 body {
   background-color: var(--background-global);
-
-  &.page-frame {
-    border-width: 0px 5px 0px 5px;
-  }
+  padding: 5px;
 }
 .page-frame {
   border-color: var(--bule-3);
   border-style: solid;
 
-  &.fixed-border-top, &.fixed-border-bottom {
+  &.fixed-border-top, &.fixed-border-bottom,
+  &.fixed-border-left, &.fixed-border-right {
     position: fixed;
     left: 0px;
     width: 100%;
+    z-index: 1;
   }
   &.fixed-border-top {
     top: 0px;
@@ -58,8 +59,26 @@ body {
   &.fixed-border-bottom {
     bottom: 0px;
   }
+  &.fixed-border-left, &.fixed-border-right {
+    top: 0px;
+    height: 100%;
+    width: 5px;
+  }
+  &.fixed-border-right {
+    right: 0px;
+    left: auto;
+  }
 }
 #app {
   padding-top: 70px;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding: 0px;
+  }
+  .page-frame {
+    border: none;
+  }
 }
 </style>
