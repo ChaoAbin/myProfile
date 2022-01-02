@@ -16,10 +16,11 @@
 
       <b-collapse id="nav_collapse" style="justify-content: end;" is-nav>
         <b-navbar-nav class="ml-auto flex-nowrap pc-navbar">
-          <b-nav-item href="/home" active>Home</b-nav-item>
-          <b-nav-item href="/about">ABOUT</b-nav-item>
-          <b-nav-item href="/works">WORKS</b-nav-item>
-          <b-nav-item href="/contact">CONTACT</b-nav-item>
+          <b-nav-item
+            v-for="(link, index) in links"
+            :key="index"
+            :to="link.toLowerCase()"
+            :active="($route.name === link)">{{ link }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -32,6 +33,9 @@ export default {
   name: 'Header',
   data() {
     return {
+      links: [
+        'Home', 'About', 'Works', 'Contact'
+      ],
       showNavbarShadow: (window.scrollY ? true : false)
     }
   },

@@ -14,21 +14,36 @@ const routes = [
     children: [{
       path: 'home',
       name: 'Home',
-      disabled: true,
       component: () => import('@/views/Home'),
       meta: {
         title: '首頁',
-        icon: 'home'
+        // icon: 'home'
+      }
+    },{
+      path: 'about',
+      name: 'About',
+      component: () => import('@/views/About'),
+      meta: {
+        title: '關於我',
+        // icon: 'about'
+      }
+    },{
+      path: 'works',
+      name: 'Works',
+      component: () => import('@/views/Works'),
+      meta: {
+        title: '作品集',
+        // icon: 'home'
+      }
+    },{
+      path: 'contact',
+      name: 'Contact',
+      component: () => import('@/views/Contact'),
+      meta: {
+        title: '聯絡我',
+        // icon: 'Contact'
       }
     }]
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
 
