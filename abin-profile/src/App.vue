@@ -35,7 +35,8 @@ export default {
 :root {
   --blue-1: #337ab7;
   --blue-2: #548FCE;
-  --bule-3: #528ecc;
+  --blue-3: #528ecc;
+  --blue-4: #93B3E3;
   --background-global: #EFF4FB;
 }
 body {
@@ -43,7 +44,7 @@ body {
   padding: 5px;
 }
 .page-frame {
-  border-color: var(--bule-3);
+  border-color: var(--blue-3);
   border-style: solid;
 
   &.fixed-border-top, &.fixed-border-bottom,
