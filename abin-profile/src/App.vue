@@ -42,6 +42,11 @@ export default {
 body {
   background-color: var(--background-global);
   padding: 5px;
+  font-size: 14px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+p {
+  margin: 0 0 10px;
 }
 .page-frame {
   border-color: var(--blue-3);
