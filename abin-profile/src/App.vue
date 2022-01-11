@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container-xl">
     <div class="page-frame fixed-border-left"></div>
     <div class="page-frame fixed-border-right"></div>
     <div class="page-frame fixed-border-top"></div>
@@ -52,12 +52,13 @@ p {
   border-color: var(--blue-3);
   border-style: solid;
 
+
   &.fixed-border-top, &.fixed-border-bottom,
   &.fixed-border-left, &.fixed-border-right {
     position: fixed;
     left: 0px;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
   }
   &.fixed-border-top {
     top: 0px;

@@ -1,5 +1,5 @@
 <template>
-  <header :class="(showNavbarShadow ? 'navbar-shadow': '')">
+  <header :class="`container-xl ${(showNavbarShadow ? 'navbar-shadow': '')}`">
     <b-navbar class="navbar-expand-md container" toggleable fixed>
       <div class="d-flex flex-grow-1">
         <b-navbar-brand class="mr-auto tab-circle-left active" href="/home">
@@ -58,9 +58,11 @@ export default {
     position: fixed;
     width: calc(100% - 10px);
     top: 5px;
-    left: 5px;
+    left: 0px;
+    right: 0px;
     z-index: 1;
     background-color: var(--background-global);
+    margin: auto;
 
     a.navbar-brand, .nav-item .nav-link {
       position: relative;
