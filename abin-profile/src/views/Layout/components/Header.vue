@@ -1,6 +1,6 @@
 <template>
-  <header :class="`container-xl ${(showNavbarShadow ? 'navbar-shadow': '')}`">
-    <b-navbar class="navbar-expand-md container" toggleable fixed>
+  <header :class="`${(showNavbarShadow ? 'navbar-shadow': '')}`">
+    <b-navbar class="navbar-expand-md container-xl" toggleable fixed>
       <div class="d-flex flex-grow-1">
         <b-navbar-brand class="mr-auto tab-circle-left active" href="/home">
           ABIN WORKS
