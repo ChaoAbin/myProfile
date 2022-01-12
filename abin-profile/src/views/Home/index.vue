@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <img src="@/assets/icon/home.png" style="width: 100%; position: absolute; top: 0px; left: 0px;">
-    <img src="@/assets/icon/home.png" style="width: 100%; top: 0px; left: 0px; visibility: hidden;">
+    <img src="@/assets/images/icon/home.png" style="width: 100%; position: absolute; top: 0px; left: 0px;">
+    <img src="@/assets/images/icon/home.png" style="width: 100%; top: 0px; left: 0px; visibility: hidden;">
 
     <div class="absolute-center content-block">
       <div class="absolute-center"> 
         <div class="content-title">
           <p>{{ new Date().getFullYear() }}</p>
           <span>ABIN WORKS</span>
-          <img style="margin-left: 10px;" src="@/assets/icon/icon_phone.png">
-          <img style="margin-left: 10px;" src="@/assets/icon/icon_pc.png">
+          <img style="margin-left: 15px;" src="@/assets/images/icon/icon_phone.png">
+          <img style="margin-left: 15px;" src="@/assets/images/icon/icon_pc.png">
         </div>
         <br>
         <div class="content-desc">
@@ -58,7 +58,7 @@ export default {
   }
   .content-block {
     width: 60%;
-    height: 60%;
+    height: 55%;
     min-width: 250px;
   }
   .absolute-center.content-block {
