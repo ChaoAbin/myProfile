@@ -1,0 +1,51 @@
+香港商英迪思股份有限公司台灣分公司
+
+    網站全端工程師 2019/03/04 - now
+
+    系統開發與維運人員，主要負責PHP、Grails的系統維運/改版/開發，
+    同時也負責前端RWD網頁與WebView App的維運/開發
+
+    Miss覓思/SpeedMalls-購物網:
+        規劃Vue專案的基本架構與資料夾結構
+        --Vuex、Store、Mixins、Vue Router、Models、VueI18n、axios、run mode
+        規劃Grails專案的基本架構
+        --MVC架構、i18n、init test data、導入spring security rest api
+        依照開發需求，規劃資料庫欄位與Restful API
+        後台串接第三方金流、物流、發票
+        建置工程團隊使用的Git Workflow
+        WebView App衍伸的其他問題處理
+    
+        技術: Vue、Bootstrap、SCSS、Grails、Groovy、Java、MySQL、Git
+
+    MonitorDashboard-後台監控網頁:
+        使用Vue框架
+        舊有專案新增Cross domain API
+
+        技術: Vue、Grails、Groovy、Git
+
+    Auziere-品牌APP:
+        公司專案前端開始導入Vue框架
+        --Vuex、Store、Vue Router、vuetify、vee-validate
+        協同開發部分功能的Restful API
+
+        技術: Vue、Vuetify、Grails、Groovy、Java、MySQL、Git
+
+    經典e卡-微信小程序:
+        了解小程序的前端框架並規劃專案架構
+        收集使用者資料必進行數據分析
+        串接微信服務
+        --取得微信用戶基本個資、產生QRcode、產生小程序碼、圖片檢查服務
+
+        技術: 小程序框架、JavaScript、Grails、Groovy、Java、MySQL、Git
+
+協作雲端科技有限公司
+
+    網頁前端工程師 2018/08 - 2019/03
+
+    系統開發人員，參與前端3人團隊開發公司產品
+
+    
+        
+
+
+

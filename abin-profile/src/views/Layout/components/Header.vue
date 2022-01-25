@@ -60,7 +60,7 @@ export default {
     top: 5px;
     left: 0px;
     right: 0px;
-    z-index: 1;
+    z-index: 10;
     background-color: var(--background-global);
     margin: auto;
 

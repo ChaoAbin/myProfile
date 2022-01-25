@@ -41,7 +41,7 @@
       </div>
 
       <div class="col-4">
-        <h3>Database</h3>
+        <h3>System</h3>
         <hr/>
         <p>Linux: CentOS/Ubuntu</p>
         <p>Web Servers: Apache HTTP Server/Nginx Web Server/Apache Tomcat/NodeJS</p>
@@ -50,7 +50,7 @@
       </div>
 
       <div class="col-4">
-        <h3>System</h3>
+        <h3>Database</h3>
         <hr/>
         <p>MySQL: DbVisualizer/phpMyadmin</p>
         <p>MongoDB: Robo 3T</p>
@@ -71,30 +71,33 @@
 
 
 
-    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 history">
+    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 history">
         <div class="row" v-for="(val, key) in _history" :key="key" style="position: relative;">
             <div class="col-xs-2 col-sm-1 item-bullet"></div>
             <div class="col-xs-10 col-sm-11 item">
-                <h3><b>{{ val.company }} {{ val.title }}</b></h3>
-                <h3><b>{{ val.time }}</b></h3>
-                <div>
-                  工作內容簡述
-                </div>
-                <ul class="work-list">
-                  負責的專案
-                  --特別的貢獻
-                </ul>
-                <div>
-                  相關技術(MySQL VueJs)
+                <h5><b>{{ val.company }}</b></h5>
+                <h6><b>{{ val.title }} {{ val.time }}</b></h6>
+                <p>{{ val.desc }}</p>
+                <div 
+                    v-for="(project, pKey) in val.projects"
+                    :key="pKey"
+                    class="work-list">
+                    <a class="project-name">
+                        {{ project.name }}
+                    </a>
+                    <ul>
+                        <li v-for="(r, rKey) in project.responsible" :key="rKey">
+                            {{ r }}
+                        </li>
+                    </ul>
+                    <p>
+                        <span>Skills: </span>
+                        <span>{{ project.skill }}</span>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <div>
-      看作品集頁
-    </div>
-
   </div>
 </template>
 
@@ -177,9 +180,6 @@ export default {
     .item-bullet {
         position: static;
     }
-    .history .row {
-        margin-bottom: 25px;
-    }
     .row:before, .row:after {
         content: " ";
         display: table;
@@ -216,171 +216,34 @@ export default {
         margin-left: 0.5px;
         z-index: 1;
     }
-    .item h3 {
-        font-size: 18px;
-        line-height: 26px;
-        font-weight: bold;
-        color: #548FCE;
-        margin: 0px 0px 10px 0px;
-    }
-    .item li {
-        list-style: none;
-    }
-    .item ul, .item li {
-        padding-left: 0px;
-        font-size: 16px;
-        color: #81A5CC;
-    }
-    .item .description li {
-        color: #548FCE;
- 
+    .item {
         letter-spacing: 1px;
-    }
+        h3, h4, h5, h6 {
+            line-height: 26px;
+            font-weight: bold;
+            color: #548FCE;
+            margin: 0px 0px 10px 0px;
+        }
+        h6 {
+            font-size: 16px;
+        }
+        a {
+            font-size: 16px;
+            display: block;
+            margin: 20px 0px 10px 0px;
+        }
+        li {
+            list-style: none;
 
-    /* profile list */
-    .profile-list {
-        height: auto;
-    }
-    .profile-list:hover .profile-content {
-        animation: none;
-    }
-    .profile-content {
-        position: relative;
-        box-shadow: 0px 4px 9px #ABBDCF;
-        background: white;
-        border-radius: 8px;
-    }
-    /* .profile-list:hover .profile-content {
-        animation-name: mouseOverProfile;
-        animation-duration:2s;
-        animation-iteration-count:infinite;
-        animation-timing-function:step-start;
-    } */
-    .all-rights-reserved {
-        display: none;
-    }
-    .profile-title, .profile-sub-title {
-        font-size: 15px;
-        color: #548FCE;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-    }
-    .profile-sub-title {
-        width: 100%;
-        height: 20px;
-        margin-bottom: 10px;
-    }
-    .profile-desc {
-        font-size: 13px;
-        color: #93B3E3;
-        height: 37px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-    }
-    .nav > li > a.profile-type-link:hover {
-        background-color: transparent;
-    }
-    .nav > li > a.profile-type-link {
-        padding: 0px;
-    }
-
-    @keyframes mouseOverProfile {
-        0%{
-            top: 0px;
+            &::before {
+                content: "-";
+                text-indent: -5px;
+            }
         }
-        100%{
-            top: -20px;
-        }
-    }
-    .customized .see-detail {
-        position: relative;
-        width: 100%;
-        height: auto;
-        left: 0px;
-        top: 0px;
-        border-radius: 0px 0px 8px 8px;
-    }
-    .customized .see-detail-content {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 10%;
-        color: #FFFFFF;
-        letter-spacing: 1px;
-    }
-    .see-detail-content h3 {
-        color: #ffffff;
-        font-weight: 500;
-        text-align: left;
-        margin: 0px 0px 22px 0px;
-    }
-    .see-detail.customized-1 {
-        background-color: #656CEE;
-    }
-    .see-detail.customized-2 {
-        background-color: #38B1E3;
-    }
-    .see-detail.customized-1 .see-detail-content button {
-        color: #656CEE;
-    }
-    .see-detail.customized-1 .see-detail-content button:hover {
-        color: #fff;
-        background-color: #444BCD;
-        border: 1px solid #fff;
-    }
-    .see-detail.customized-2 .see-detail-content button:hover {
-        color: #fff;
-        background-color: #088CC2;
-        border: 1px solid #fff;
-    }
-    .customized .see-detail-content {
-        padding: 5%;
-    }
-    .see-detail-content button {
-        padding: 10px 0px;
-        position: absolute;
-        bottom: 0px;
-        width: 80%;
-        background: #FFFFFF;
-        border-radius: 10px;
-        left: 0px;
-        margin: 0px 5% 10% 10%;
-        border: none;
-    }
-    .customized img {
-        border-radius: 8px 8px 0px 0px;
-    }
-    .customized .see-detail-content a,
-    .customized .see-detail-content a button {
-        position: relative;
-        width: 100%;
-        min-height: 46px;
-        margin: 0px;
-        display: inline
-    }
-
-    @media (max-width: 767px) {
-	    .timeline {
-            left: 0px;
-        }
-        .name-block {
-            left: 0px;
-        }
-    }
-    @media (min-width: 992px) {
-        /* header block */
-        .profile-img.col-md-6 {
-            float: left;
-        }
-        .profile-text.col-md-6 {
-            float: right;
+        ul, li {
+            padding-left: 0px;
+            font-size: 16px;
+            color: #81A5CC;
         }
     }
 </style>
