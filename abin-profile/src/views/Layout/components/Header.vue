@@ -20,7 +20,7 @@
             v-for="(link, index) in links"
             :key="index"
             :to="link.toLowerCase()"
-            :active="($route.name === link)">{{ link }}</b-nav-item>
+            :active="($route.path.indexOf(link.toLowerCase()) !== -1)">{{ link }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -31,10 +31,12 @@
 
 export default {
   name: 'Header',
+  computed: {
+  },
   data() {
     return {
       links: [
-        'Home', 'About', 'Works', 'Contact'
+        'Home', 'About', 'Portfolio', 'Contact'
       ],
       showNavbarShadow: (window.scrollY ? true : false)
     }

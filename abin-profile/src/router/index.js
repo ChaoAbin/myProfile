@@ -27,11 +27,19 @@ const routes = [
         // icon: 'about'
       }
     },{
-      path: 'works',
-      name: 'Works',
-      component: () => import('@/views/Works'),
+      path: 'portfolio',
+      name: 'Portfolio',
+      component: () => import('@/views/Portfolio'),
       meta: {
         title: '作品集',
+        // icon: 'home'
+      }
+    },{
+      path: 'portfolio/:project',
+      name: 'Project',
+      component: () => import('@/views/Portfolio/project'),
+      meta: {
+        title: '作品',
         // icon: 'home'
       }
     },{
@@ -43,6 +51,12 @@ const routes = [
         // icon: 'Contact'
       }
     }]
+  },
+  {
+    path: "*",
+    name: 'Root',
+    component: Layout,
+    redirect: '/home',
   }
 ]
 
