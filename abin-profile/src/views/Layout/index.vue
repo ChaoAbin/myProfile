@@ -1,8 +1,8 @@
 <template>
   <div class="bg products-home">
-    <Header />
+    <!-- <Header /> -->
     <app-main />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
