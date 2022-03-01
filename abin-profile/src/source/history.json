@@ -39,7 +39,7 @@
 			"串接微信服務"
 		],
 		"projectLink": "",
-		"skill": "小程序框架、JavaScript、Grails、Groovy、Java、MySQL、Git"
+		"skill": "小程序框架、JS、Grails、Groovy、Java、MySQL、Git"
 	}]
 },{
 	"company": "協作雲端科技有限公司",
@@ -62,17 +62,210 @@
 	"company": "香港商英迪思股份有限公司台灣分公司",
 	"title": "全端工程師",
 	"time": "2015/07 ~ 2018/08",
-	"desc": "系統開發人員，參與前端3人團隊開發公司產品",
+	"desc": "系統開發與維運人員，主要負責PHP、Grails的系統維運/改版/開發，同時也負責前端RWD網頁與WebView App的維運/開發",
 	"projects": [{
-		"name": "CCOS-雲端作業系統",
+		"name": "自助加盟系統-註冊成為經銷商",
 		"responsible": [
-			"即時訊息通知功能UI串接，並討論前端的串接方式",
-			"查看檔案詳情功能，模仿Mac的檔案詳情操作",
-			"垃圾桶功能，可將既有檔案移至垃圾桶或永久刪除",
-			"定義scss架構: 層級關係、主題設計",
-			"相關icon的動畫特效: 小鈴鐺、進度條、垃圾桶...等等"
+			"依據不同營業點載入營業點相關資料",
+			"將各營業點的經銷商資料同步至主伺服器",
+			"依據網頁執行環境Native/Web，去取得相關環境變數",
+			"定義Native與Web的API"
 		],
 		"projectLink": "",
-		"skill": "ReactJs、Git、Scrum、Jira"
+		"skill": "JS(jQuery)、Grails、Groovy、MySQL、SVN"
+	},{
+		"name": "電子簽名版-櫃台人員確認經銷商身份",
+		"responsible": [
+			"使用canvas製作簽名版功能，並將簽名檔轉成Base64給後端",
+			"依據不同營業點載入營業點相關資料",
+			"將各營業點的經銷商資料同步至主伺服器",
+			"依據網頁執行環境Native/Web，去取得相關環境變數",
+			"定義Native與Web的API"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、Grails、Groovy、MySQL、SVN"
+	},{
+		"name": "WiFi自助服務-入口網",
+		"responsible": [
+			"提供經銷商使用相關自助服務"
+		],
+		"projectLink": "",
+		"skill": "JS、SVN"
+	},{
+		"name": "南英/南門扶輪社官網-官方網站與CMS",
+		"responsible": [
+			"開發會員、選舉、問卷相關功能",
+			"串接Google行事曆、雲端硬碟、短網址API",
+			"串接Firebase、Apple推播服務",
+			"串接iLovePDF進行PDF檔案相關處理",
+			"定義Native與Web的API",
+			"Grails Scripts自動部屬指令"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、Backbone、Grails、Groovy、MySQL、SVN"
+	},{
+		"name": "OpenCart-公司品牌App的CMS",
+		"responsible": [
+			"後台API改版(統一舊有格式)",
+			"後台CMS功能改版",
+			"新增匯入/出Excel功能",
+			"建立新增營業點時的SOP流程",
+			"youtube、優酷影片縮圖處理(轉webp)",
+			"將資料庫/圖片資料壓縮，提供app端下載"
+		],
+		"projectLink": "",
+		"skill": "PHP(PHPExcel、zip、imageMagick)、OpenCart、MySQL、SVN"
+	},{
+		"name": "StockTV-電子看板系統",
+		"responsible": [
+			"設計/開發手機版內容",
+			"後台CMS功能改版",
+			"新增匯入/出excel功能",
+			"建立新增營業點時的SOP流程"
+		],
+		"projectLink": "",
+		"skill": "PHP(PHPExcel)、CakePHP、MySQL、SVN"
+	},{
+		"name": "uPlaza-品牌App的CMS",
+		"responsible": [
+			"因應疫情，商品物流可改為宅配",
+			"資安-系統改走https",
+			"資安-apache設定區網才可使用，且需登入",
+			"資安-設定Header Authorization"
+		],
+		"projectLink": "",
+		"skill": "PHP(PHPExcel)、CakePHP、MySQL、SVN"
+	},{
+		"name": "Speed Catalog-WebView App",
+		"responsible": [
+			"串接金流:JETCO Pay、支付寶",
+			"出貨憑證依據訂單狀態顯示對應顏色的QRcode",
+			"新增首購優惠"
+		],
+		"projectLink": "",
+		"skill": "PHP、JS(jQuery)、MySQL、SVN"
+	},{
+		"name": "PNSServer-推播服務",
+		"responsible": [
+			"簡化SQL語法加快Query速度",
+			"2分鐘內完成十萬筆推播",
+			"CentOS6升級OpenSSL與升級PHP Curl extension(php5.6.40)"
+		],
+		"projectLink": "",
+		"skill": "PHP(phpjobscheduler、GCM、FCM、APNS)、NodeJs、PM2、JS(jQuery)、MySQL、SVN"
+	}]
+},{
+	"company": "歐特雲科技有限公司",
+	"title": "全端工程師",
+	"time": "2014/11 ~ 2015/07",
+	"desc": "系統開發人員，後台使用LAMP架構，同時也負責前端RWD網頁與WebView App/Android App的開發",
+	"projects": [{
+		"name": "Arofly-產品網站",
+		"responsible": [
+			"串接Google/FB Sign-In API"
+		],
+		"projectLink": "",
+		"skill": "PHP、Laravel、JS(jQuery)"
+	},{
+		"name": "SCS-派工單系統",
+		"responsible": [
+			"規劃後台MC架構",
+			"資料庫資料轉移",
+			"依開發需求進行功能改版"
+		],
+		"projectLink": "",
+		"skill": "PHP、Slim3、JS(jQuery)、bootstrap 3"
+	},{
+		"name": "eFamily-穿戴式裝置App",
+		"responsible": [
+			"定義WebView與Native同訊協定",
+			"WebView App前台規劃"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery、Highcharts)、bootstrap 3"
+	},{
+		"name": "ADCall-通訊錄App",
+		"responsible": [
+			"Android App開發",
+			"定義WebView與Native同訊協定",
+			"攔截通話事件，並顯示廣告"
+		],
+		"projectLink": "",
+		"skill": "Android App、JS(jQuery)、bootstrap 3"
+	}]
+},{
+	"company": "乒乓話網",
+	"title": "前端工程師",
+	"time": "2014/04 ~ 2014/11",
+	"desc": "系統開發人員，參與前端3人團隊開發公司產品",
+	"projects": [{
+		"name": "App365builder-創建網站平台",
+		"responsible": [
+			"相關功能開發"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、bootstrap 3"
+	}]
+},{
+	"company": "聖傑國際數位科技有限公司",
+	"title": "程式設計師助理",
+	"time": "2013/06 ~ 2014/04",
+	"desc": "協助",
+	"projects": [{
+		"name": "送不出去的國書-數位典藏",
+		"responsible": [
+			"頁面排版",
+			"將文檔資料轉成json格式"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、CSS、JSON"
+	},{
+		"name": "新竹眷村博物館-數位典藏",
+		"responsible": [
+			"整體網站功能",
+			"設計拉霸小遊戲",
+			"krpano(VR)串接"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、krpano(VR)"
+	},{
+		"name": "台灣國家公園-數位典藏",
+		"responsible": [
+			"資料分析，列出各頁面使用的資料表與欄位值"
+		],
+		"projectLink": "",
+		"skill": "MySQL"
+	},{
+		"name": "禪林虛擬博物館-數位典藏",
+		"responsible": [
+			"網頁頁面建置",
+			"前後台資料串接"
+		],
+		"projectLink": "",
+		"skill": "JS(jQuery)、PHP、MySQL"
+	}]
+},{
+	"company": "Side Project",
+	"title": "",
+	"time": "-",
+	"desc": "",
+	"projects": [{
+		"name": "ShrimpKing-買賣媒合系統後台",
+		"responsible": [
+			"後台專案建置",
+			"使用Restful API",
+			"串接FireBase Realtime Database"
+		],
+		"projectLink": "",
+		"skill": "PHP(CodeIgniter)、FireBase Realtime Database"
+	},{
+		"name": "hwater-小型購物網站",
+		"responsible": [
+			"後台專案建置",
+			"使用Restful API",
+			"串接FireBase Realtime Database"
+		],
+		"projectLink": "",
+		"skill": "PHP(CodeIgniter)、FireBase Realtime Database"
 	}]
 }]
