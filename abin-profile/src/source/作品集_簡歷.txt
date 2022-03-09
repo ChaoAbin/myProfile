@@ -1,0 +1,22 @@
+香港商英迪思
+全端工程師 2019/03/04 ~ Now
+
+系統開發與維運人員，主要負責PHP、Grails的系統維運/改版/開發，同時也負責前端RWD網頁與WebView App的維運/開發
+開發購物網站，並規劃前台專案架構與後台資料庫設計
+專案的基本架構與資料夾結構
+
+
+
+
+Miss覓思/SpeedMalls-購物網
+ 規劃Vue專案的基本架構與資料夾結構
+ 規劃Grails專案的基本架構
+ 依照開發需求，規劃資料庫欄位與Restful API
+ 後台串接第三方金流、物流、發票
+ 建置工程團隊使用的Git Workflow
+ WebView App衍伸的其他問題處理
+Skills: Vue、Bootstrap、SCSS、Grails、Groovy、Java、MySQL、Git
+
+MonitorDashboard-後台監控網頁
+ 使用Vue框架
+ 舊有專案新增Cross domain API

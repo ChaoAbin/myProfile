@@ -13,7 +13,7 @@
 			"建置工程團隊使用的Git Workflow",
 			"WebView App衍伸的其他問題處理"
 		],
-		"projectLink": "",
+		"link": "https://www.speedmalls.com",
 		"skill": "Vue、Bootstrap、SCSS、Grails、Groovy、Java、MySQL、Git"
 	},{
 		"name": "MonitorDashboard-後台監控網頁",
@@ -21,7 +21,7 @@
 			"使用Vue框架",
 			"舊有專案新增Cross domain API"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "Vue、Grails、Groovy、Git"
 	},{
 		"name": "Auziere-品牌APP",
@@ -29,7 +29,9 @@
 			"建議公司前端專案使用Vue框架",
 			"協同開發部分功能的Restful API"
 		],
-		"projectLink": "",
+		"link": "",
+		"appStore": "https://apps.apple.com/tw/app/auziere/id1516771355",
+		"googlePlay": "https://play.google.com/store/apps/details?id=com.iit.auziere&hl=zh_TW&gl=US",
 		"skill": "Vue、Vuetify、Grails、Groovy、Java、MySQL、Git"
 	},{
 		"name": "經典e卡-微信小程序",
@@ -38,7 +40,7 @@
 			"收集使用者資料必進行數據分析",
 			"串接微信服務"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "小程序框架、JS、Grails、Groovy、Java、MySQL、Git"
 	}]
 },{
@@ -55,11 +57,11 @@
 			"定義scss架構: 層級關係、主題設計",
 			"相關icon的動畫特效: 小鈴鐺、進度條、垃圾桶...等等"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "ReactJs、Git、Scrum、Jira"
 	}]
 },{
-	"company": "香港商英迪思股份有限公司台灣分公司",
+	"company": "香港商英迪思",
 	"title": "全端工程師",
 	"time": "2015/07 ~ 2018/08",
 	"desc": "系統開發與維運人員，主要負責PHP、Grails的系統維運/改版/開發，同時也負責前端RWD網頁與WebView App的維運/開發",
@@ -71,7 +73,7 @@
 			"依據網頁執行環境Native/Web，去取得相關環境變數",
 			"定義Native與Web的API"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、Grails、Groovy、MySQL、SVN"
 	},{
 		"name": "電子簽名版-櫃台人員確認經銷商身份",
@@ -82,14 +84,14 @@
 			"依據網頁執行環境Native/Web，去取得相關環境變數",
 			"定義Native與Web的API"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、Grails、Groovy、MySQL、SVN"
 	},{
 		"name": "WiFi自助服務-入口網",
 		"responsible": [
 			"提供經銷商使用相關自助服務"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS、SVN"
 	},{
 		"name": "南英/南門扶輪社官網-官方網站與CMS",
@@ -101,7 +103,7 @@
 			"定義Native與Web的API",
 			"Grails Scripts自動部屬指令"
 		],
-		"projectLink": "",
+		"link": "https://www.southeliterc.org/push/mobile",
 		"skill": "JS(jQuery)、Backbone、Grails、Groovy、MySQL、SVN"
 	},{
 		"name": "OpenCart-公司品牌App的CMS",
@@ -113,7 +115,7 @@
 			"youtube、優酷影片縮圖處理(轉webp)",
 			"將資料庫/圖片資料壓縮，提供app端下載"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(PHPExcel、zip、imageMagick)、OpenCart、MySQL、SVN"
 	},{
 		"name": "StockTV-電子看板系統",
@@ -123,7 +125,7 @@
 			"新增匯入/出excel功能",
 			"建立新增營業點時的SOP流程"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(PHPExcel)、CakePHP、MySQL、SVN"
 	},{
 		"name": "uPlaza-品牌App的CMS",
@@ -133,7 +135,7 @@
 			"資安-apache設定區網才可使用，且需登入",
 			"資安-設定Header Authorization"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(PHPExcel)、CakePHP、MySQL、SVN"
 	},{
 		"name": "Speed Catalog-WebView App",
@@ -142,7 +144,7 @@
 			"出貨憑證依據訂單狀態顯示對應顏色的QRcode",
 			"新增首購優惠"
 		],
-		"projectLink": "",
+		"link": "https://play.google.com/store/apps/details?id=com.iit.map2p",
 		"skill": "PHP、JS(jQuery)、MySQL、SVN"
 	},{
 		"name": "PNSServer-推播服務",
@@ -151,7 +153,7 @@
 			"2分鐘內完成十萬筆推播",
 			"CentOS6升級OpenSSL與升級PHP Curl extension(php5.6.40)"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(phpjobscheduler、GCM、FCM、APNS)、NodeJs、PM2、JS(jQuery)、MySQL、SVN"
 	}]
 },{
@@ -164,7 +166,7 @@
 		"responsible": [
 			"串接Google/FB Sign-In API"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP、Laravel、JS(jQuery)"
 	},{
 		"name": "SCS-派工單系統",
@@ -173,7 +175,7 @@
 			"資料庫資料轉移",
 			"依開發需求進行功能改版"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP、Slim3、JS(jQuery)、bootstrap 3"
 	},{
 		"name": "eFamily-穿戴式裝置App",
@@ -181,7 +183,7 @@
 			"定義WebView與Native同訊協定",
 			"WebView App前台規劃"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery、Highcharts)、bootstrap 3"
 	},{
 		"name": "ADCall-通訊錄App",
@@ -190,7 +192,7 @@
 			"定義WebView與Native同訊協定",
 			"攔截通話事件，並顯示廣告"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "Android App、JS(jQuery)、bootstrap 3"
 	}]
 },{
@@ -203,21 +205,21 @@
 		"responsible": [
 			"相關功能開發"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、bootstrap 3"
 	}]
 },{
 	"company": "聖傑國際數位科技有限公司",
 	"title": "程式設計師助理",
 	"time": "2013/06 ~ 2014/04",
-	"desc": "協助",
+	"desc": "協助資料庫分析與形象網站開發",
 	"projects": [{
 		"name": "送不出去的國書-數位典藏",
 		"responsible": [
 			"頁面排版",
 			"將文檔資料轉成json格式"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、CSS、JSON"
 	},{
 		"name": "新竹眷村博物館-數位典藏",
@@ -226,14 +228,14 @@
 			"設計拉霸小遊戲",
 			"krpano(VR)串接"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、krpano(VR)"
 	},{
 		"name": "台灣國家公園-數位典藏",
 		"responsible": [
 			"資料分析，列出各頁面使用的資料表與欄位值"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "MySQL"
 	},{
 		"name": "禪林虛擬博物館-數位典藏",
@@ -241,13 +243,13 @@
 			"網頁頁面建置",
 			"前後台資料串接"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "JS(jQuery)、PHP、MySQL"
 	}]
 },{
 	"company": "Side Project",
 	"title": "",
-	"time": "-",
+	"time": "",
 	"desc": "",
 	"projects": [{
 		"name": "ShrimpKing-買賣媒合系統後台",
@@ -256,7 +258,7 @@
 			"使用Restful API",
 			"串接FireBase Realtime Database"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(CodeIgniter)、FireBase Realtime Database"
 	},{
 		"name": "hwater-小型購物網站",
@@ -265,7 +267,7 @@
 			"使用Restful API",
 			"串接FireBase Realtime Database"
 		],
-		"projectLink": "",
+		"link": "",
 		"skill": "PHP(CodeIgniter)、FireBase Realtime Database"
 	}]
 }]

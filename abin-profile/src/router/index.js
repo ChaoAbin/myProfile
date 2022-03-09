@@ -9,8 +9,7 @@ const routes = [
     path: '/',
     name: 'Root',
     component: Layout,
-    // redirect: '/home',
-    redirect: '/about',
+    redirect: '/cv',
     children: [
     // {
     //   path: 'home',
@@ -20,17 +19,15 @@ const routes = [
     //     title: '首頁',
     //     // icon: 'home'
     //   }
-    // },
-    {
-      path: 'about',
-      name: 'About',
-      component: () => import('@/views/About'),
-      meta: {
-        title: '關於我',
-        // icon: 'about'
-      }
-    },
-    // {
+    // },{
+    //   path: 'about',
+    //   name: 'About',
+    //   component: () => import('@/views/About'),
+    //   meta: {
+    //     title: '關於我',
+    //     // icon: 'about'
+    //   }
+    // },{
     //   path: 'portfolio',
     //   name: 'Portfolio',
     //   component: () => import('@/views/Portfolio'),
@@ -54,8 +51,16 @@ const routes = [
     //     title: '聯絡我',
     //     // icon: 'Contact'
     //   }
-    // }
-    ]
+    // },
+    {
+      path: 'cv',
+      name: 'cv',
+      component: () => import('@/views/CV'),
+      meta: {
+        title: '簡歷',
+        // icon: 'Contact'
+      }
+    }]
   },
   {
     path: "*",

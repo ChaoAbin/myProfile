@@ -1,27 +1,24 @@
 <template>
   <div class="about">
-    <div class="col-xss-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 profile-text" style="position: relative; margin-bottom: 30px;">
-        <h2 style="font-weight: blod;">曹宏斌 Abin</h2>
-        <p id="title" style="font-weight: bold; font-size: 15pt; margin-bottom: 20px; ">網頁全端工程師，擅長使用 JavaScript、PHP、Groovy……等各種程式語言。</p>
+    <div class="row head-block">
+        <div class="col-xss-12 col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align: center;">
+            <img class="my-photo" src="@/assets/images/head_2022_03.jpg">
+        </div>
 
-        <p>現職於IIT內的系統維運人員，擅長團隊合作，主要負責PHP、Grails的系統維運與RWD網頁開發，從網頁前端開始學習相關的IT技術，html/css/jquery一直到現在RWD的設計切版，都非常的拿手，伺服器方面，使用Linux作業系統與PHP/MySQL來進行開發，藉此可更瞭解伺服器的相關應用，熟悉這些工具之後，才能在與業主提案討論時，快速的提供意見，讓我在溝通與合作的技巧更卓越，解決問題的能力，和案件時程的規劃，皆有專業的水準。</p>
-        <p>可獨立作業，從與業主接洽需求、系統分析、資料庫的規劃、網頁切版，擁有八年多的設計經歷，一路從網頁前端，進步到全端網站設計師，具有豐富的實戰經驗，已經準備好要找個舞台來好好施展身手了。</p>
-    </div>
-
-    <!--div class="col-xss-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 profile-img">
-        <div class="heand">
-            <img class="img-responsive my-photo" src="@/assets/images/head_2018_06_25.png">
-            <div class="name-block">
-                <p class="name-en">Abin</p>
-                <p class="name-ch">曹宏斌</p>
+        <div class="col-xss-12 col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <h1 class="name">曹宏斌 Abin</h1>
+            <h2 id="title" style="font-weight: bold; font-size: 16pt; margin-bottom: 10px;">網頁全端工程師</h2>
+            <h3 style="font-weight: bold; font-size: 12pt; margin-bottom: 10px;">擅長使用 JavaScript、PHP、Groovy……等各種程式語言。</h3>
+            <p>現職於IIT內的系統維運人員，擅長團隊合作，主要負責PHP、Grails的系統維運與RWD網頁開發，從網頁前端開始學習相關的IT技術，html/css/jquery一直到現在RWD的設計切版，都非常的拿手，伺服器方面，使用Linux作業系統與PHP/MySQL來進行開發，藉此可更瞭解伺服器的相關應用，熟悉這些工具之後，才能在與業主提案討論時，快速的提供意見，讓我在溝通與合作的技巧更卓越，解決問題的能力，和案件時程的規劃，皆有專業的水準。</p>
+            <p>可獨立作業，從與業主接洽需求、系統分析、資料庫的規劃、網頁切版，擁有八年多的設計經歷，一路從網頁前端，進步到全端網站設計師，具有豐富的實戰經驗，已經準備好要找個舞台來好好施展身手了。</p>
+            <div class="contact">
+                <p><b-icon icon="telephone"></b-icon>0909393711</p>
+                <p><b-icon icon="envelope"></b-icon>aaa51507@gmail.com</p>
             </div>
         </div>
-    </div-->
+    </div>
 
-    <div class="clearfix"></div>
-
-    <h2>技能</h2>
-    <div class="row">
+    <div class="row skill">
       <div class="col-xss-12 col-xs-12 col-sm-12 col-md-4" style="margin-top: 20px;">
         <h3>Front-End</h3>
         <hr/>
@@ -81,18 +78,23 @@
                     v-for="(project, pKey) in val.projects"
                     :key="pKey"
                     class="work-list">
-                    <a class="project-name">
+                    <b-button v-b-toggle="`about-${key}-${pKey}`" class="project-name">
                         {{ project.name }}
+                    </b-button>
+                    <a v-if="project.link" target="_blank" :href="project.link" class="project-link">
+                        <b-icon icon="box-arrow-down-right" />
                     </a>
-                    <ul>
-                        <li v-for="(r, rKey) in project.responsible" :key="rKey">
-                            {{ r }}
-                        </li>
-                    </ul>
-                    <p>
-                        <span>Skills: </span>
-                        <span>{{ project.skill }}</span>
-                    </p>
+                    <b-collapse :id="`about-${key}-${pKey}`" visible="true">
+                        <ul>
+                            <li v-for="(r, rKey) in project.responsible" :key="rKey">
+                                {{ r }}
+                            </li>
+                        </ul>
+                        <!-- <p>
+                            <span>Skills: </span>
+                            <span>{{ project.skill }}</span>
+                        </p> -->
+                    </b-collapse>
                 </div>
             </div>
         </div>
@@ -138,41 +140,27 @@ export default {
     }
     
     /* header block */
-    .heand {
-        position: relative;
-        color: #548FCE;
+    .head-block {
+        color: var(--blue-2);
+
+        .name {
+            font-size: 24pt;
+        }
+        .my-photo {
+            width: 100%;
+            max-width: 200px;
+        }
+        .contact {
+            font-size: 12pt;
+            svg {
+                margin-right: 10px;
+            }
+        }
     }
-    .my-photo {
-        width: 100%;
-    }
-    .name-block {
-        position: absolute;
-        height: 100px;
-        left: -20px;
-        top: 0px;
-        bottom: 90px;
-        margin: auto;
-    }
-    .name-block p {
-        margin-bottom: 0px;
-    }
-    .name-en {
-        font-size: 48px;
-    }
-    .name-ch {
-        font-size: 20px;
-    }
-    .profile-img {
-        float: right;
-    }
-    .profile-text {
-        float: left;
-        color: #548FCE;
-    }
-    .phone-pc-block {
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
+    .skill {
+        h3, hr {
+            color: var(--blue-2);
+        }
     }
 
     /* time line */
@@ -217,20 +205,41 @@ export default {
     }
     .item {
         letter-spacing: 1px;
+        padding-bottom: 10px;
+
         h3, h4, h5, h6 {
             line-height: 26px;
             font-weight: bold;
-            color: #548FCE;
+            color: var(--blue-2);
             margin: 0px 0px 10px 0px;
         }
         h6 {
             font-size: 16px;
         }
-        a {
-            font-size: 16px;
-            display: block;
-            margin: 20px 0px 10px 0px;
+        .work-list, ul {
+            padding-top: 15px;
+            margin-bottom: 0px;
         }
+        .project-name {
+            background-color: var(--blue-1);
+            border-color: var(--blue-1);
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .project-link {
+            transform: rotate(270deg);
+            display: inline-block;
+            line-height: 38px;
+            font-size: 19px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+        // a {
+        //     font-size: 16px;
+        //     display: block;
+        //     margin: 20px 0px 10px 0px;
+        // }
         li {
             list-style: none;
 
